@@ -1,2 +1,4 @@
 .idea/
+TwinFinder/bin/*
+TwinFinder/obj/*
 TwinFinder.sln
