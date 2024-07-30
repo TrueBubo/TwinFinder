@@ -5,16 +5,7 @@ namespace TwinFinder;
 public class OptionsParser {
    private static OptionsParser? _instance; // Singleton
    private static readonly object _lock = new object(); // Prevents race condition
-   private enum Mode {
-      closest
-   }
-
-   private Hashtable _availableOptions = new Hashtable() {
-      { "mode", "-m <MODE>" },
-      { "normalizeWords", "--normalize <N>" },
-      { "pairsToFind", "-p <P>" },
-      { "synonymCount", "-s <S>" }
-   };
+   
    
    // Default settings
    private Hashtable _options = new Hashtable() {
