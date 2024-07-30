@@ -1,7 +1,7 @@
-namespace TwinFinder;
+namespace TwinFinder.ContentIO;
 
 public class FileWordsParser : IWordsParser {
-    public List<string> parse(string filename, bool normalizeWords) {
+    public String[] parse(string filename, bool normalizeWords) {
         List<String> words = new List<string>();
         StreamReader reader = File.OpenText(filename);
         String? line;
@@ -11,7 +11,7 @@ public class FileWordsParser : IWordsParser {
             words.AddRange(wordsOnLine);
         }
         
-        return words;
+        return words.ToArray();
     }
     
 }

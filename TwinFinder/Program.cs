@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Net.Security;
+﻿using TwinFinder.Configuration;
+using TwinFinder.ContentAnalysis;
+using TwinFinder.ContentFinding;
+using TwinFinder.ContentIO;
 
 namespace TwinFinder;
 
@@ -10,23 +12,19 @@ internal class Program {
 		Directory.SetCurrentDirectory(basePath);
 
 		String configName = "config.toml";
-		TomlConfigReader reader = new TomlConfigReader();
+		IConfigReader reader = new TomlConfigReader();
 		OptionsParser optionsParser = new OptionsParser(configName, reader);
 		Options options = optionsParser.options;
-
-		List<string> files = new List<string>();
-		foreach (String pattern in args) {
-			files.AddRange(Directory.GetFiles(basePath, pattern));
-		}
-
-		files = files.Where(file => File.Exists(file)).ToList();
 		
-		ProcessFiles processFiles = new ProcessFiles();
+		IContentFinder contentFinder = new FilesFinder();
+		String[] files = contentFinder.find(args);
+		
+		ProcessContent processContent = new ProcessContent();
 		foreach(String filename in files) {
 			Thread thread = new Thread(
 				() => {
 					try {
-						processFiles.processFile(filename, options.mode, options.normalizeWords);
+						processContent.processContent(filename, new FileWordsParser(), options.mode, options.normalizeWords);
 					}
 					catch (Exception e) {
 						Console.Error.WriteLine($"{filename} could not be processed");
@@ -35,12 +33,7 @@ internal class Program {
 				});
 			thread.Start();
 		}
-		
-		
 	}
-
-	
-	
 }
 
 
