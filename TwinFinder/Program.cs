@@ -16,7 +16,6 @@ internal class Program {
 		
 		FileWordsParser wordsReader = new FileWordsParser();
 
-		Console.WriteLine(options.mode + " " + options.normalizeWords + " " + options.pairsToFind + " " + options.synonymCount);
 		ProcessFiles processFiles = new ProcessFiles();
 		foreach(String filename in args) {
 			Thread thread = new Thread(
@@ -24,6 +23,8 @@ internal class Program {
 			);
 			thread.Start();
 		}
+		
+		
 	}
 
 	
