@@ -9,7 +9,7 @@ public class ProcessContent {
 	
 	
 	public void processContent(String filename, IWordsParser parser, String mode, bool normalizeWords) {
-		List<String> words = parser.parse(filename, normalizeWords);
+		String[] words = parser.parse(filename, normalizeWords);
 		
 		switch (mode) {
 			case "closest": {

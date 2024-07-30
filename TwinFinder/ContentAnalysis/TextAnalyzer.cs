@@ -2,7 +2,7 @@ namespace TwinFinder.ContentAnalysis;
 
 public static class TextAnalyzer {
     
-    public static Dictionary<String, int> getFrequencies(List<String> words) {
+    public static Dictionary<String, int> getFrequencies(String[] words) {
         Dictionary<String, int> frequencies = new Dictionary<String, int>();
         foreach (String word in words) {
             if (frequencies.ContainsKey(word)) frequencies[word]++;
