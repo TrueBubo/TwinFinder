@@ -1,0 +1,4 @@
+My new file is really nice
+It can handle multiple lines
+
+Line this
