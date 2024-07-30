@@ -8,14 +8,9 @@ public class OptionsParser {
    
    
    // Default settings
-   private Hashtable _options = new Hashtable() {
-      {"mode", "closest"},
-      {"normalizeWords", false},
-      {"pairsToFind", 3},
-      {"synonymCount", 5}
-   };
-
-   public Hashtable options {
+   private Options _options = new Options();
+   private Hashtable table = new Hashtable();
+   public Options options {
       get { return _options; }
    }
    
@@ -28,7 +23,23 @@ public class OptionsParser {
          // Loads settings from config file
          Hashtable configOptions = configReader.parse(filename);
          foreach (var key in configOptions.Keys) {
-            _options[key] = configOptions[key];
+            table[key] = configOptions[key];
+         }
+
+         try {
+            if (table.ContainsKey("mode")) _options.mode = table["mode"]?.ToString() ?? String.Empty;
+            if (table.ContainsKey("normalizeWords"))
+               _options.normalizeWords =
+                  bool.Parse(table["normalizeWords"]?.ToString() ?? "false");
+            if (table.ContainsKey("pairsToFind"))
+               _options.pairsToFind = int.Parse(table["pairsToFind"]?.ToString() ?? "-1");
+            if (table.ContainsKey("synonymCount"))
+               _options.synonymCount = int.Parse(table["synonymCount"]?.ToString() ?? "-1");
+            if (!options.isValid()) throw new ArgumentException(); // Ensures we do not continue with an invalid config
+         }
+         catch (ArgumentException) {
+            Console.Error.WriteLine($"There is a mistake in {filename}, please before continuing fix the config file");
+            Environment.Exit(1);
          }
       }
    }

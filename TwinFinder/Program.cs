@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Net.Security;
 
 namespace TwinFinder;
 
@@ -11,14 +12,15 @@ internal class Program {
 		String configName = "config.toml";
 		TomlConfigReader reader = new TomlConfigReader();
 		OptionsParser optionsParser = new OptionsParser(configName, reader);
-		Hashtable options = optionsParser.options;
+		Options options = optionsParser.options;
 		
 		FileWordsParser wordsReader = new FileWordsParser();
 
+		Console.WriteLine(options.mode + " " + options.normalizeWords + " " + options.pairsToFind + " " + options.synonymCount);
 		ProcessFiles processFiles = new ProcessFiles();
 		foreach(String filename in args) {
 			Thread thread = new Thread(
-				() => processFiles.processFile(filename, options["mode"].ToString())
+				() => processFiles.processFile(filename, options.mode.ToString(), options.normalizeWords)
 			);
 			thread.Start();
 		}
