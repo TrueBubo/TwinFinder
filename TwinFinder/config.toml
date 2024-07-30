@@ -1,5 +1,5 @@
 mode = "closest" # What technique will be used to determine similar files
-normalizeWords = false # Removes accent and diacritics
+normalizeWords = true # Removes accent and diacritics
 pairsToFind = 3 # How many closest pairs are returned
 
 synonymCount = 5 # Change to zero to not consider synonyms

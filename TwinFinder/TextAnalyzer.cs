@@ -3,6 +3,7 @@ using System.Collections;
 namespace TwinFinder;
 
 public static class TextAnalyzer {
+    
     public static Dictionary<String, int> getFrequencies(List<String> words) {
         Dictionary<String, int> frequencies = new Dictionary<String, int>();
         foreach (String word in words) {

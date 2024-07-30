@@ -1,5 +1,6 @@
 namespace TwinFinder;
 
 public interface IWordsParser {
-   public List<String> parse(String filename);
+   // Returns list of words from files excluding punctuation
+   public List<String> parse(String filename, bool withDiacritics); 
 }

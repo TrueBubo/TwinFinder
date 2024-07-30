@@ -5,9 +5,13 @@ public class ProcessFiles {
 	HashSet<String> uniqueWords = new HashSet<string>();
 	
 	
-	public void processFile(String filename, String mode) {
+	public void processFile(String filename, String mode, bool normalizeWords) {
 		FileWordsParser wordsReader = new FileWordsParser();
-		List<String> words = wordsReader.parse(filename);
+		List<String> words = wordsReader.parse(filename, normalizeWords);
+		foreach (var word in words) {
+			Console.WriteLine(word);
+			
+		}
 		
 		switch (mode) {
 			case "closest": {
