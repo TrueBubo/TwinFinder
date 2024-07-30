@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace TwinFinder;
+namespace TwinFinder.Configuration;
 
 using Tommy;
 

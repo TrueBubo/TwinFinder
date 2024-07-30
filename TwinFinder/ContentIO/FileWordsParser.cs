@@ -1,4 +1,4 @@
-namespace TwinFinder;
+namespace TwinFinder.ContentIO;
 
 public class FileWordsParser : IWordsParser {
     public List<string> parse(string filename, bool normalizeWords) {

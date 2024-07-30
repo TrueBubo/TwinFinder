@@ -1,6 +1,4 @@
-using System.Collections;
-
-namespace TwinFinder;
+namespace TwinFinder.ContentAnalysis;
 
 public static class TextAnalyzer {
     

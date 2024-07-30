@@ -1,11 +1,12 @@
 using System.Globalization;
 using System.Text;
-namespace TwinFinder;
+
+namespace TwinFinder.ContentIO;
 
 public static class StringModifications {
     public static String getAlphabeticalPart(String word) {
             return new String(word.Where(char.IsLetter).ToArray());
-        }
+    }
      
     // Standardizes text to the form without any diacritics. Texts without diacritics will be therefore be
     // similar to the same text with diacritics.
