@@ -1,17 +1,15 @@
+using System.Collections.Concurrent;
+
 namespace TwinFinder;
 
 public class ProcessFiles {
-    Dictionary<String, Dictionary<String, int>> frequencies = new Dictionary<String, Dictionary<string, int>>();
-	HashSet<String> uniqueWords = new HashSet<string>();
+    ConcurrentDictionary<String, Dictionary<String, int>> frequencies = new ConcurrentDictionary<String, Dictionary<string, int>>();
+	ConcurrentBag<String> uniqueWords = new ConcurrentBag<String>();
 	
 	
 	public void processFile(String filename, String mode, bool normalizeWords) {
 		FileWordsParser wordsReader = new FileWordsParser();
 		List<String> words = wordsReader.parse(filename, normalizeWords);
-		foreach (var word in words) {
-			Console.WriteLine(word);
-			
-		}
 		
 		switch (mode) {
 			case "closest": {

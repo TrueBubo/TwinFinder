@@ -13,14 +13,26 @@ internal class Program {
 		TomlConfigReader reader = new TomlConfigReader();
 		OptionsParser optionsParser = new OptionsParser(configName, reader);
 		Options options = optionsParser.options;
-		
-		FileWordsParser wordsReader = new FileWordsParser();
 
+		List<string> files = new List<string>();
+		foreach (String pattern in args) {
+			files.AddRange(Directory.GetFiles(basePath, pattern));
+		}
+
+		files = files.Where(file => File.Exists(file)).ToList();
+		
 		ProcessFiles processFiles = new ProcessFiles();
-		foreach(String filename in args) {
+		foreach(String filename in files) {
 			Thread thread = new Thread(
-				() => processFiles.processFile(filename, options.mode.ToString(), options.normalizeWords)
-			);
+				() => {
+					try {
+						processFiles.processFile(filename, options.mode, options.normalizeWords);
+					}
+					catch (Exception e) {
+						Console.Error.WriteLine($"{filename} could not be processed");
+						Console.Error.WriteLine(e);
+					}
+				});
 			thread.Start();
 		}
 		
