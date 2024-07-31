@@ -13,7 +13,7 @@ internal class Program {
 
 		String configName = "config.toml";
 		IConfigReader reader = new TomlConfigReader();
-		OptionsParser optionsParser = new OptionsParser(configName, reader);
+		OptionsParser optionsParser = new OptionsParser(configName, args, reader);
 		Options options = optionsParser.options;
 		
 		IContentFinder contentFinder = new FilesFinder();
