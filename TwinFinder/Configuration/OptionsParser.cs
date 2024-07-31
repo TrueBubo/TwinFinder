@@ -13,9 +13,9 @@ public class OptionsParser {
    private Options _options = new Options();
    public Options options => _options;
 
-   private String[] _filenames;
+   private String[]? _contentLoc;
 
-   public String[] filenames => _filenames;
+   public String[]? contentLoc => _contentLoc;
    
    private static readonly Dictionary<string, Action<Hashtable, string, Options>> optionSettingFunctions = new Dictionary<string, Action<Hashtable, string, Options>> {
            {"mode", (table, nameInTable, options) => options.mode = table[nameInTable]?.ToString() ?? string.Empty},
@@ -31,14 +31,20 @@ public class OptionsParser {
          
          // Loads settings from config file
          Hashtable configOptions = configReader.parse(filename);
-         
          setOptions(configOptions); 
          // Ensures we do not continue with an invalid config
          if (!options.isValid()) {
             Console.Error.WriteLine($"There is a mistake in {filename}, please before continuing fix the config file");
             Environment.Exit(1);
          }
-         
+
+         ArgsParser.Args cmdOptions = new ArgsParser().parse(args);
+         _contentLoc = cmdOptions.contentLocations;
+         setOptions(cmdOptions.options);
+         if (!options.isValid()) {
+            Console.Error.WriteLine($"Program arguments you have entered are not valid");
+            Environment.Exit(1);
+         }
       }
    }
 
@@ -57,7 +63,5 @@ public class OptionsParser {
          Console.Error.WriteLine($"Unknown option {key}");
       }
       if (configOptions.Count > 0) Environment.Exit(1);
-      
-      Console.WriteLine($"{options.mode} {options.normalizeWords} {options.synonymCount} {options.pairsToFind}");
    }
 }
