@@ -42,20 +42,8 @@ internal class Program {
 		foreach (Thread thread in threads) {
 			thread.Join();
 		}
-
-		for (int idx = 0; idx < files.Length; idx++) {
-			int localIdx = idx;
-			threads[localIdx] = new Thread(
-				() => {
-					processContent.padFrequencies(files[localIdx]);
-				});
-			threads[localIdx].Start();
-		}
 		
-		// Waiting for all threads to finish
-		foreach (Thread thread in threads) {
-        	thread.Join();
-        }
+		
 	}
 }
 

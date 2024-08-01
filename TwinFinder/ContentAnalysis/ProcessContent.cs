@@ -1,7 +1,10 @@
+using System.Collections;
 using System.Collections.Concurrent;
 using TwinFinder.ContentIO;
 
 namespace TwinFinder.ContentAnalysis;
+
+
 
 public class ProcessContent {
     private ConcurrentDictionary<String, Dictionary<String, int>> _frequencies = new ConcurrentDictionary<String, Dictionary<string, int>>();
@@ -34,4 +37,5 @@ public class ProcessContent {
 			if (!_frequencies[loc].ContainsKey(word)) _frequencies[loc][word] = 0;
 		}
 	}
+	
 }
