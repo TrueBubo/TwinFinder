@@ -6,7 +6,11 @@ public class FileWordsParser : IWordsParser {
         StreamReader reader = File.OpenText(filename);
         String? line;
         while ((line = reader.ReadLine()) != null) {
-            String[] wordsOnLine = line.Split().Select(StringModifications.getAlphabeticalPart).Where(word => word != "").ToArray();
+            String[] wordsOnLine = line.Split()
+                .Select(StringModifications.getAlphabeticalPart)
+                .Select(word => word.ToLower())
+                .Where(word => word != "")
+                .ToArray();
             if (normalizeWords) wordsOnLine = wordsOnLine.Select(StringModifications.removeDiacritics).ToArray();
             words.AddRange(wordsOnLine);
         }

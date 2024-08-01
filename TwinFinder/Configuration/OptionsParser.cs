@@ -24,17 +24,17 @@ public class OptionsParser {
            {"synonymCount", (table, nameInTable, options) => options.synonymCount = int.Parse(table[nameInTable]?.ToString() ?? "-1")}
    };
    
-   public OptionsParser(String filename, String[] args, IConfigReader configReader) {
+   public OptionsParser(String loc, String[] args, IConfigReader configReader) {
       lock (Lock) {
          if (_instance != null) return; // Ensures there cannot be more instances
          _instance = this;
          
          // Loads settings from config file
-         Hashtable configOptions = configReader.parse(filename);
+         Hashtable configOptions = configReader.parse(loc);
          setOptions(configOptions); 
          // Ensures we do not continue with an invalid config
          if (!options.isValid()) {
-            Console.Error.WriteLine($"There is a mistake in {filename}, please before continuing fix the config file");
+            Console.Error.WriteLine($"There is a mistake in {loc}, please before continuing fix the config file");
             Environment.Exit(1);
          }
 

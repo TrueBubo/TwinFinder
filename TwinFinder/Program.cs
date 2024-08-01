@@ -15,24 +15,35 @@ internal class Program {
 		IConfigReader reader = new TomlConfigReader();
 		OptionsParser optionsParser = new OptionsParser(configName, args, reader);
 		Options options = optionsParser.options;
-		
+
 		IContentFinder contentFinder = new FilesFinder();
 		String[] files = contentFinder.find(args);
-		
+
 		ProcessContent processContent = new ProcessContent();
-		foreach(String filename in files) {
-			Thread thread = new Thread(
+		Thread[] threads = new Thread[files.Length];
+
+		for (int idx = 0; idx < files.Length; idx++) {
+			int localIdx = idx;
+			threads[localIdx] = new Thread(
 				() => {
 					try {
-						processContent.processContent(filename, new FileWordsParser(), options.mode, options.normalizeWords);
+						processContent.processContent(files[localIdx], new FileWordsParser(), options.mode,
+							options.normalizeWords);
 					}
 					catch (Exception e) {
-						Console.Error.WriteLine($"{filename} could not be processed");
+						Console.Error.WriteLine($"{files[localIdx]} could not be processed");
 						Console.Error.WriteLine(e);
 					}
 				});
-			thread.Start();
+			threads[localIdx].Start();
 		}
+
+		// Waiting for all threads to finish
+		foreach (Thread thread in threads) {
+			thread.Join();
+		}
+		
+		
 	}
 }
 
