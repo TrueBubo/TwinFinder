@@ -32,6 +32,14 @@ public class Options {
         set => _synonymCount = value;
     }
 
+    private String _language = Defaults.Language;
+
+    public String language {
+        get => _language;
+        set => _language = value;
+    }
+    
+
     public bool isValid() {
         return (_possibleModes.Contains(mode) && pairsToFind >= 0 && synonymCount >= 0);
     }

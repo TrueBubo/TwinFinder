@@ -1,6 +1,6 @@
 namespace TwinFinder.ContentAnalysis;
 
-public static class TextAnalyzer {
+public static class TextStats {
     
     public static Dictionary<String, int> getFrequencies(String[] words) {
         Dictionary<String, int> frequencies = new Dictionary<String, int>();

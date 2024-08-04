@@ -17,11 +17,12 @@ public class OptionsParser {
 
    public String[]? contentLoc => _contentLoc;
    
-   private static readonly Dictionary<string, Action<Hashtable, string, Options>> optionSettingFunctions = new Dictionary<string, Action<Hashtable, string, Options>> {
+   private static readonly Dictionary<string, Action<Hashtable, string, Options>> OptionSettingFunctions = new Dictionary<string, Action<Hashtable, string, Options>> {
            {"mode", (table, nameInTable, options) => options.mode = table[nameInTable]?.ToString() ?? string.Empty},
            {"normalizeWords", (table, nameInTable, options) => options.normalizeWords = bool.Parse(table[nameInTable]?.ToString() ?? "false")},
            {"pairsToFind", (table, nameInTable, options) => options.pairsToFind = int.Parse(table[nameInTable]?.ToString() ?? "-1")},
-           {"synonymCount", (table, nameInTable, options) => options.synonymCount = int.Parse(table[nameInTable]?.ToString() ?? "-1")}
+           {"synonymCount", (table, nameInTable, options) => options.synonymCount = int.Parse(table[nameInTable]?.ToString() ?? "-1")},
+           {"language", (table, nameInTable, options) => options.language = table[nameInTable]?.ToString() ?? string.Empty}
    };
    
    public OptionsParser(String loc, String[] args, IConfigReader configReader) {
@@ -55,7 +56,7 @@ public class OptionsParser {
    }
    
    private void setOptions(Hashtable configOptions) {
-      foreach (var pair in optionSettingFunctions) {
+      foreach (var pair in OptionSettingFunctions) {
          if (setOption(configOptions, pair.Key, pair.Value)) configOptions.Remove(pair.Key);
       }
 

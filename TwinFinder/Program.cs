@@ -19,7 +19,7 @@ internal class Program {
 		IContentFinder contentFinder = new FilesFinder();
 		String[] files = contentFinder.find(args);
 
-		ProcessContent processContent = new ProcessContent();
+		ProcessContent processContent = new ProcessContent(options);
 		Thread[] threads = new Thread[files.Length];
 
 		for (int idx = 0; idx < files.Length; idx++) {
@@ -27,8 +27,7 @@ internal class Program {
 			threads[localIdx] = new Thread(
 				() => {
 					try {
-						processContent.processContent(files[localIdx], new FileWordsParser(), options.mode,
-							options.normalizeWords);
+						processContent.processContent(files[localIdx], new FileWordsParser(), options);
 					}
 					catch (Exception e) {
 						Console.Error.WriteLine($"{files[localIdx]} could not be processed");
