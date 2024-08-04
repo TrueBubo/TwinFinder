@@ -41,8 +41,7 @@ public class ProcessContent {
                 foreach (String word in frequenciesFile.Keys) {
                     _uniqueWords.Add(word);
                 }
-
-
+                
                 break;
             }
             default: {

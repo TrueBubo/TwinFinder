@@ -25,6 +25,7 @@ public class Synonyms {
         StreamReader reader = new StreamReader(SynonymsFile[lang]);
         String? line;
         while ((line = reader.ReadLine()) != null) {
+            if (line[0] == '/') continue; // Comment
             Word word = JsonSerializer.Deserialize<Word>(line) ?? new Word();
             _synonyms[word.word] = word.synonyms.Take(synonymCount).ToList();
         }
