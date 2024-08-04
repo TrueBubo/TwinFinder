@@ -8,7 +8,7 @@ public class Synonyms {
         public string word { get; set; }
         public List<string> synonyms { get; set; }
     }
-    
+
     private static readonly Dictionary<String, String> SynonymsFile = new Dictionary<String, String>() {
         { "en", Path.Combine("SynonymsFiles", "synonyms-en.jsonl") }
     };
@@ -21,7 +21,7 @@ public class Synonyms {
             foreach (String availableLang in SynonymsFile.Keys) Console.Error.WriteLine($"\t{availableLang}");
             Environment.Exit(1);
         }
-        
+
         StreamReader reader = new StreamReader(SynonymsFile[lang]);
         String? line;
         while ((line = reader.ReadLine()) != null) {
@@ -29,6 +29,11 @@ public class Synonyms {
             _synonyms[word.word] = word.synonyms.Take(synonymCount).ToList();
         }
     }
-    
-    
+
+    public Synonyms() {
+    }
+
+    public List<String> get(String word) {
+        return _synonyms.ContainsKey(word) ? _synonyms[word] : new List<String>();
+    }
 }
