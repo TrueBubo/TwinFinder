@@ -9,7 +9,8 @@ public class ArgsParser {
             {"-m", "mode"},
             {"--normalize", "normalizeWords"},
             {"-n", "pairsToFind"},
-            {"-s", "synonymCount"}
+            {"-s", "synonymCount"},
+            {"--lang", "language"}
         };
     
     public class Args {
