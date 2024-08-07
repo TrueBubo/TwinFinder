@@ -1,12 +1,11 @@
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace TwinFinder.ContentAnalysis;
 
 public class Synonyms {
     private class Word {
-        public string word { get; set; }
-        public List<string> synonyms { get; set; }
+        public string word { get; set; } = "null";
+        public List<string> synonyms { get; set; } = new List<string>();
     }
 
     private static readonly Dictionary<String, String> SynonymsFile = new Dictionary<String, String>() {
