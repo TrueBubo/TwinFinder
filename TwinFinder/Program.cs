@@ -41,8 +41,11 @@ internal class Program {
 		foreach (Thread thread in threads) {
 			thread.Join();
 		}
-		
-		
+
+		foreach (HeapEntry<String[]> entry in processContent.getTwinFiles(options)) {
+			// Key refers to paths of files compared, priority is their similarity 
+			Console.WriteLine($"{entry.Key[0]} {entry.Key[1]} {entry.Priority}");
+		}
 	}
 }
 
