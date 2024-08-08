@@ -16,14 +16,26 @@ public class OptionsParser {
    private String[]? _contentLoc;
 
    public String[]? contentLoc => _contentLoc;
-   
-   private static readonly Dictionary<string, Action<Hashtable, string, Options>> OptionSettingFunctions = new Dictionary<string, Action<Hashtable, string, Options>> {
-           {"mode", (table, nameInTable, options) => options.mode = table[nameInTable]?.ToString() ?? string.Empty},
-           {"normalizeWords", (table, nameInTable, options) => options.normalizeWords = bool.Parse(table[nameInTable]?.ToString() ?? "false")},
-           {"pairsToFind", (table, nameInTable, options) => options.pairsToFind = int.Parse(table[nameInTable]?.ToString() ?? "-1")},
-           {"synonymCount", (table, nameInTable, options) => options.synonymCount = int.Parse(table[nameInTable]?.ToString() ?? "-1")},
-           {"language", (table, nameInTable, options) => options.language = table[nameInTable]?.ToString() ?? string.Empty}
-   };
+
+   private static readonly Dictionary<string, Action<Hashtable, string, Options>> OptionSettingFunctions =
+      new Dictionary<string, Action<Hashtable, string, Options>> {
+         { "mode", (table, nameInTable, options) => options.mode = table[nameInTable]?.ToString() ?? string.Empty }, {
+            "normalizeWords",
+            (table, nameInTable, options) =>
+               options.normalizeWords = bool.Parse(table[nameInTable]?.ToString() ?? "false")
+         }, {
+            "pairsToFind",
+            (table, nameInTable, options) => options.pairsToFind = int.Parse(table[nameInTable]?.ToString() ?? "-1")
+         }, {
+            "synonymCount",
+            (table, nameInTable, options) => options.synonymCount = int.Parse(table[nameInTable]?.ToString() ?? "-1")
+         }, {
+            "language",
+            (table, nameInTable, options) => options.language = table[nameInTable]?.ToString() ?? string.Empty
+         }, {"useAbsolutePaths",
+         (table, nameInTable, options) => options.useAbsolutePaths = bool.Parse(table[nameInTable]?.ToString() ?? "false")
+         }
+      };
    
    public OptionsParser(String loc, String[] args, IConfigReader configReader) {
       lock (Lock) {

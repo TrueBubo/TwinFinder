@@ -38,8 +38,14 @@ public class Options {
         get => _language;
         set => _language = value;
     }
-    
 
+    private bool _useAbsolutePaths = Defaults.UseAbsolutePaths;
+
+    public bool useAbsolutePaths {
+        get => _useAbsolutePaths;
+        set => _useAbsolutePaths = value;
+    }
+    
     public bool isValid() {
         return (_possibleModes.Contains(mode) && pairsToFind >= 0 && synonymCount >= 0);
     }

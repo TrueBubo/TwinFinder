@@ -6,7 +6,7 @@ namespace TwinFinder.ContentAnalysis;
 public class Closest<TK> where TK : notnull {
     private readonly ConcurrentDictionary<String, Dictionary<TK, int>> _vectors;
     private readonly String[] _indexes;
-    private Options _options;
+    private readonly Options _options;
 
     public class KHighest<TL> where TL : notnull {
         private PriorityQueue<TL, double> _heap = new PriorityQueue<TL, double>();
@@ -57,7 +57,7 @@ public class Closest<TK> where TK : notnull {
             for (int i = from; i <= to; i++) {
                 for (int j = i + 1; j <= to; j++) {
                     kClosest.enqueue(
-                        new String[] { _indexes[i], _indexes[j] },
+                        [_indexes[i], _indexes[j]],
                         -cosineSimilarity(_vectors[_indexes[i]], _vectors[_indexes[j]]));
                 }
             }

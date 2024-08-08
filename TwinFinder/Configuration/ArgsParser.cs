@@ -4,13 +4,14 @@ namespace TwinFinder.Configuration;
 
 public class ArgsParser {
     // cmd call: name in OptionsParser
-    private Dictionary<String, String> validOptions =
+    private Dictionary<String, String> _validOptions =
         new Dictionary<String, String>() {
             {"-m", "mode"},
             {"--normalize", "normalizeWords"},
             {"-n", "pairsToFind"},
             {"-s", "synonymCount"},
-            {"--lang", "language"}
+            {"--lang", "language"},
+            {"--absolute", "useAbsolutePaths"}
         };
     
     public class Args {
@@ -33,8 +34,8 @@ public class ArgsParser {
         int idx = 0;
         for (; idx < args.Length - 1; idx++) {
             if (args[idx][0] != '-') break;
-            if (!validOptions.ContainsKey(args[idx])) break;
-            options[validOptions[args[idx]]] = args[++idx];
+            if (!_validOptions.ContainsKey(args[idx])) break;
+            options[_validOptions[args[idx]]] = args[++idx];
         }
         
         String[] contentLocations = args[idx..];

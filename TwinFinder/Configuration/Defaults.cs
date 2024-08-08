@@ -6,4 +6,5 @@ static class Defaults {
     public const int PairsToFind = 3;
     public const int SynonymCount = 5;
     public const String Language = "en";
+    public const bool UseAbsolutePaths = false;
 }

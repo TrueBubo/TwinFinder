@@ -4,5 +4,5 @@ namespace TwinFinder.ContentFinding;
 
 public interface IContentFinder {
     // Finds locations satisfying given pattern
-    public String[] find(String[] patterns);
+    public String[] find(String loc, String[] patterns);
 }
