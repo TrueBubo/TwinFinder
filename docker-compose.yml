@@ -1,6 +1,0 @@
-﻿services:
-  twinfinder:
-    image: twinfinder
-    build:
-      context: .
-      dockerfile: TwinFinder/Dockerfile
