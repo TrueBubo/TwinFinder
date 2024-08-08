@@ -1,14 +1,29 @@
+using System.Resources;
+
 namespace TwinFinder.Configuration;
 
 public class Options {
-
     // Default settings 
-    private String[] _possibleModes = { "closest" };
-    private String _mode = Defaults.Mode;
+    public enum Mode {
+        Closest
+    }
+    
+    private static Dictionary<String, Mode> _modes = new Dictionary<String, Mode>() {
+        { "closest", Mode.Closest }
+    };
+    
 
-    public String mode {
+    private Mode _mode = Defaults.Mode;
+
+    public Mode mode {
         get => _mode;
         set => _mode = value;
+    }
+
+    public bool setMode(String strMode) {
+        if (!_modes.ContainsKey(strMode)) {return false;}
+        mode = _modes[strMode];
+        return true;
     }
 
     private bool _normalizeWords = Defaults.NormalizeWords;
@@ -32,23 +47,38 @@ public class Options {
         set => _synonymCount = value;
     }
 
-    private String _language = Defaults.Language;
+    public enum Language {
+        English
+    }
+    private static Dictionary<String, Language> _languages = new Dictionary<String, Language>() {
+            { "en", Language.English }
+    };
 
-    public String language {
+    public static readonly Dictionary<Language, String> langToCode = new Dictionary<Language, string>() {
+        { Language.English, "en" }
+    };
+     
+    private Language _language = Defaults.Language;
+
+    public Language language {
         get => _language;
         set => _language = value;
     }
 
+    public bool setLanguage(String langCode) {
+        if (!_languages.ContainsKey(langCode)) return false;
+        language = _languages[langCode];
+        return true;
+    }
+    
     private bool _useAbsolutePaths = Defaults.UseAbsolutePaths;
 
     public bool useAbsolutePaths {
         get => _useAbsolutePaths;
         set => _useAbsolutePaths = value;
     }
-    
+
     public bool isValid() {
-        return (_possibleModes.Contains(mode) && pairsToFind >= 0 && synonymCount >= 0);
+        return (pairsToFind >= 0 && synonymCount >= 0);
     }
 }
-
-

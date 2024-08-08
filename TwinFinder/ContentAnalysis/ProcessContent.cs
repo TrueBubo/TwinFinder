@@ -7,11 +7,13 @@ namespace TwinFinder.ContentAnalysis;
 public class HeapEntry<TL> {
     public readonly TL Key;
     public readonly double Priority;
+
     public HeapEntry(TL key, double priority) {
         Key = key;
         Priority = priority;
     }
 }
+
 public class ProcessContent {
     private ConcurrentDictionary<String, Dictionary<String, int>> _frequencies =
         new ConcurrentDictionary<String, Dictionary<String, int>>();
@@ -21,7 +23,7 @@ public class ProcessContent {
 
     public ProcessContent(Options options) {
         switch (options.mode) {
-            case "closest":
+            case Options.Mode.Closest:
                 _synonyms = new Synonyms(options.language, options.synonymCount);
                 break;
             default:
@@ -35,7 +37,7 @@ public class ProcessContent {
         String[] words = parser.parse(loc, options.normalizeWords);
 
         switch (options.mode) {
-            case "closest": {
+            case Options.Mode.Closest: {
                 List<String> wordList = words.ToList();
                 foreach (String word in words) {
                     foreach (String synonym in _synonyms.get(word)) {
@@ -49,7 +51,7 @@ public class ProcessContent {
                     _uniqueWords.Add(word);
                 }
 
-                
+
                 break;
             }
             default: {
@@ -62,10 +64,10 @@ public class ProcessContent {
 
     public HeapEntry<String[]>[] getTwinFiles(Options options) {
         switch (options.mode) {
-            case "closest":
+            case Options.Mode.Closest:
                 Closest<String> closest = new Closest<String>(_frequencies, options);
                 var result = closest.getKClosest(options.pairsToFind, 0, _frequencies.Count - 1);
-                
+
                 List<HeapEntry<String[]>> entries = new List<HeapEntry<String[]>>();
                 HeapEntry<String[]>? entry = result.dequeue();
                 while (entry != null) {
@@ -75,7 +77,7 @@ public class ProcessContent {
 
                 entries.Reverse();
                 return entries.ToArray();
-                
+
             default:
                 Console.Error.WriteLine($"Mode {options.mode} does not exist");
                 Environment.Exit(1);
