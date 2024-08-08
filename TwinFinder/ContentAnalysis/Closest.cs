@@ -13,6 +13,7 @@ public class Closest<TK> where TK : notnull {
         private Dictionary<TL, double> _priorities = new Dictionary<TL, double>();
         private readonly int _capacity;
         public int count => _heap.Count;
+
         public KHighest(int capacity = int.MaxValue) {
             this._capacity = capacity;
         }
@@ -26,22 +27,18 @@ public class Closest<TK> where TK : notnull {
         }
 
         public HeapEntry<TL>? dequeue() {
-            if (count == 0) return null; 
+            if (count == 0) return null;
             TL element = _heap.Dequeue();
             double priority = _priorities[element];
             _priorities.Remove(element);
             return new HeapEntry<TL>(element, -priority);
-         }
-
-        
-        
+        }
     }
 
     public Closest(ConcurrentDictionary<String, Dictionary<TK, int>> vectors, Options options) {
         _vectors = vectors;
         _indexes = vectors.Keys.ToArray();
         _options = options;
-
     }
 
     // Heap returns them in reverse order
@@ -99,7 +96,7 @@ public class Closest<TK> where TK : notnull {
 
         return final;
     }
-    
+
     static double cosineSimilarity(Dictionary<TK, int> v1, Dictionary<TK, int> v2) {
         HashSet<TK> keys = new HashSet<TK>(v1.Keys);
         keys.UnionWith(v2.Keys);
