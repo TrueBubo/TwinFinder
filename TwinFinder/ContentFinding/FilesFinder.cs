@@ -1,12 +1,14 @@
 namespace TwinFinder.ContentFinding;
 
 public class FilesFinder : IContentFinder {
-    private static readonly String CurrentPath = ".";
+    private static String _currentPath = ".";
 
-    public String[] find(string[] patterns) {
+    public String[] find(String path, String[] patterns) {
+        _currentPath = path;
+        
         List<string> files = new List<string>();
         foreach (String pattern in patterns) {
-               files.AddRange(Directory.GetFiles(CurrentPath, pattern));
+               files.AddRange(Directory.GetFiles(_currentPath, pattern));
         }
         String[] result = files.Where(file => File.Exists(file)).ToArray();
 
