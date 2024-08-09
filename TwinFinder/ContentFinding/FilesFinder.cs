@@ -1,8 +1,14 @@
 namespace TwinFinder.ContentFinding;
 
+/** Finds files matching patterns */
 public class FilesFinder : IContentFinder {
     private static String _currentPath = ".";
 
+    /** Finds files in a given path, which match the pattern provided
+     * @param path Where to look for files
+     * @param patterns Patterns to match to find files
+     * @return List of all files matching the description provided
+     */
     public String[] find(String path, String[] patterns) {
         _currentPath = path;
         
