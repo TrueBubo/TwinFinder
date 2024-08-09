@@ -1,6 +1,8 @@
 namespace TwinFinder.ContentIO;
 
+/** Converts file content to match the specification required */
 public class FileWordsParser : IWordsParser {
+    /** Parses files, and puts the words from them to usable format */
     public String[] parse(string filename, bool normalizeWords) {
         List<String> words = new List<string>();
         StreamReader reader = File.OpenText(filename);
