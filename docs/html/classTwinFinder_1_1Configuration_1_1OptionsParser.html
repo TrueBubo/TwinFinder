@@ -109,6 +109,9 @@ $(function(){initNavTree('classTwinFinder_1_1Configuration_1_1OptionsParser.html
   <div class="headertitle"><div class="title">TwinFinder.Configuration.OptionsParser Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class managing parsing of all options given from both the config file and command line arguments.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -124,11 +127,14 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a1408213600aac476522e567589d9a8c0" id="r_a1408213600aac476522e567589d9a8c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1408213600aac476522e567589d9a8c0">loadConfigFile</a> (<a class="el" href="interfaceTwinFinder_1_1Configuration_1_1IConfigReader.html">IConfigReader</a> configReader, String loc)</td></tr>
-<tr class="separator:a1408213600aac476522e567589d9a8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd5e0fd23a9eba9231123b0fdb0db70e" id="r_abd5e0fd23a9eba9231123b0fdb0db70e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd5e0fd23a9eba9231123b0fdb0db70e">loadArgs</a> (String[] args)</td></tr>
-<tr class="separator:abd5e0fd23a9eba9231123b0fdb0db70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc691f620f28849939d68932e66ce40" id="r_a4fc691f620f28849939d68932e66ce40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc691f620f28849939d68932e66ce40">loadConfigFile</a> (<a class="el" href="interfaceTwinFinder_1_1Configuration_1_1IConfigReader.html">IConfigReader</a> configReader, String loc)</td></tr>
+<tr class="memdesc:a4fc691f620f28849939d68932e66ce40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets options from config file.  <br /></td></tr>
+<tr class="separator:a4fc691f620f28849939d68932e66ce40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae819a3dba5191b76aab5967a930dd8be" id="r_ae819a3dba5191b76aab5967a930dd8be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae819a3dba5191b76aab5967a930dd8be">loadArgs</a> (String[] args)</td></tr>
+<tr class="memdesc:ae819a3dba5191b76aab5967a930dd8be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets options from command line arguments.  <br /></td></tr>
+<tr class="separator:ae819a3dba5191b76aab5967a930dd8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3f80acd755ed415133f20fc5872259" id="r_a5a3f80acd755ed415133f20fc5872259"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a3f80acd755ed415133f20fc5872259">setOption</a> (Hashtable configOption, String nameInTable, Action&lt; Hashtable, String, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> &gt; update)</td></tr>
+<tr class="memdesc:a5a3f80acd755ed415133f20fc5872259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets given option.  <br /></td></tr>
 <tr class="separator:a5a3f80acd755ed415133f20fc5872259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00aba76f6e32e8783f8c37dfc94ceff7" id="r_a00aba76f6e32e8783f8c37dfc94ceff7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00aba76f6e32e8783f8c37dfc94ceff7">setOptions</a> (Hashtable configOptions)</td></tr>
 <tr class="separator:a00aba76f6e32e8783f8c37dfc94ceff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,8 +157,10 @@ Static Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad671f9fea0804bd7412fbd77dd394038" id="r_ad671f9fea0804bd7412fbd77dd394038"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad671f9fea0804bd7412fbd77dd394038">_options</a> = new()</td></tr>
+<tr class="memdesc:ad671f9fea0804bd7412fbd77dd394038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will store the options set Starts with default settings.  <br /></td></tr>
 <tr class="separator:ad671f9fea0804bd7412fbd77dd394038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab65008bd8f7a5b1e1140c02be36afa13" id="r_ab65008bd8f7a5b1e1140c02be36afa13"><td class="memItemLeft" align="right" valign="top">String?[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab65008bd8f7a5b1e1140c02be36afa13">_contentLoc</a></td></tr>
+<tr class="memdesc:ab65008bd8f7a5b1e1140c02be36afa13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location of the contents to be compared.  <br /></td></tr>
 <tr class="separator:ab65008bd8f7a5b1e1140c02be36afa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
@@ -162,9 +170,12 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a097121c06bd9b02ec03ad240fe872bc5" id="r_a097121c06bd9b02ec03ad240fe872bc5"><td class="memItemLeft" align="right" valign="top">static readonly object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a097121c06bd9b02ec03ad240fe872bc5">Lock</a> = new()</td></tr>
 <tr class="separator:a097121c06bd9b02ec03ad240fe872bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b93976308345596570a3571018e5ac" id="r_a87b93976308345596570a3571018e5ac"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; string, Action&lt; Hashtable, string, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87b93976308345596570a3571018e5ac">OptionSettingFunctions</a></td></tr>
+<tr class="memdesc:a87b93976308345596570a3571018e5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions used for parsing selected options.  <br /></td></tr>
 <tr class="separator:a87b93976308345596570a3571018e5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class managing parsing of all options given from both the config file and command line arguments. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2a5d7c4e0abda937fc63ba75f613fef3" name="a2a5d7c4e0abda937fc63ba75f613fef3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a5d7c4e0abda937fc63ba75f613fef3">&#9670;&#160;</a></span>OptionsParser()</h2>
 
@@ -200,8 +211,8 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abd5e0fd23a9eba9231123b0fdb0db70e" name="abd5e0fd23a9eba9231123b0fdb0db70e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd5e0fd23a9eba9231123b0fdb0db70e">&#9670;&#160;</a></span>loadArgs()</h2>
+<a id="ae819a3dba5191b76aab5967a930dd8be" name="ae819a3dba5191b76aab5967a930dd8be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae819a3dba5191b76aab5967a930dd8be">&#9670;&#160;</a></span>loadArgs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +221,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool TwinFinder.Configuration.OptionsParser.loadArgs </td>
+          <td class="memname">void TwinFinder.Configuration.OptionsParser.loadArgs </td>
           <td>(</td>
           <td class="paramtype">String[]</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
           <td></td>
@@ -223,10 +234,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets options from command line arguments. </p>
+
 </div>
 </div>
-<a id="a1408213600aac476522e567589d9a8c0" name="a1408213600aac476522e567589d9a8c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1408213600aac476522e567589d9a8c0">&#9670;&#160;</a></span>loadConfigFile()</h2>
+<a id="a4fc691f620f28849939d68932e66ce40" name="a4fc691f620f28849939d68932e66ce40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc691f620f28849939d68932e66ce40">&#9670;&#160;</a></span>loadConfigFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +248,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool TwinFinder.Configuration.OptionsParser.loadConfigFile </td>
+          <td class="memname">void TwinFinder.Configuration.OptionsParser.loadConfigFile </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interfaceTwinFinder_1_1Configuration_1_1IConfigReader.html">IConfigReader</a></td>          <td class="paramname"><span class="paramname"><em>configReader</em></span>, </td>
         </tr>
@@ -251,6 +264,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets options from config file. </p>
 
 </div>
 </div>
@@ -490,6 +505,17 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets given option. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configOption</td><td>Hashtable with options set </td></tr>
+    <tr><td class="paramname">nameInTable</td><td>How is the option known in configuration </td></tr>
+    <tr><td class="paramname">update</td><td>Function, which updates options </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Success </dd></dl>
+
 </div>
 </div>
 <a id="a00aba76f6e32e8783f8c37dfc94ceff7" name="a00aba76f6e32e8783f8c37dfc94ceff7"></a>
@@ -538,6 +564,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Location of the contents to be compared. </p>
+
 </div>
 </div>
 <a id="afa831315fc919465974bc736f972b2a5" name="afa831315fc919465974bc736f972b2a5"></a>
@@ -581,6 +609,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Will store the options set Starts with default settings. </p>
 
 </div>
 </div>
@@ -634,13 +664,15 @@ Static Private Attributes</h2></td></tr>
 <div class="line">            { <span class="stringliteral">&quot;language&quot;</span>, <a class="code hl_function" href="#ad776da1287b58d9ca5e69fc14dd051ec">parseLanguage</a> },</div>
 <div class="line">            { <span class="stringliteral">&quot;useAbsolutePaths&quot;</span>, <a class="code hl_function" href="#a8b9df5b96c6fe3810a79872ff93db3bd">parseAbsolutePath</a> }</div>
 <div class="line">        }</div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a5243121c1a51ebb9b40056c3d17cfcc7"><div class="ttname"><a href="#a5243121c1a51ebb9b40056c3d17cfcc7">TwinFinder.Configuration.OptionsParser.parseSynonymCount</a></div><div class="ttdeci">static void parseSynonymCount(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:111</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a560201e5dac2113ebf8a41b5027a364f"><div class="ttname"><a href="#a560201e5dac2113ebf8a41b5027a364f">TwinFinder.Configuration.OptionsParser.parseNormalize</a></div><div class="ttdeci">static void parseNormalize(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:86</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a8b9df5b96c6fe3810a79872ff93db3bd"><div class="ttname"><a href="#a8b9df5b96c6fe3810a79872ff93db3bd">TwinFinder.Configuration.OptionsParser.parseAbsolutePath</a></div><div class="ttdeci">static void parseAbsolutePath(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:131</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a9254ddca567b6bf39653af8bc8ade4eb"><div class="ttname"><a href="#a9254ddca567b6bf39653af8bc8ade4eb">TwinFinder.Configuration.OptionsParser.parseMode</a></div><div class="ttdeci">static void parseMode(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:80</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_abe293f7472d43ff886ea279d828b9e5e"><div class="ttname"><a href="#abe293f7472d43ff886ea279d828b9e5e">TwinFinder.Configuration.OptionsParser.parsePairsToFind</a></div><div class="ttdeci">static void parsePairsToFind(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:98</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_ad776da1287b58d9ca5e69fc14dd051ec"><div class="ttname"><a href="#ad776da1287b58d9ca5e69fc14dd051ec">TwinFinder.Configuration.OptionsParser.parseLanguage</a></div><div class="ttdeci">static void parseLanguage(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:124</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a5243121c1a51ebb9b40056c3d17cfcc7"><div class="ttname"><a href="#a5243121c1a51ebb9b40056c3d17cfcc7">TwinFinder.Configuration.OptionsParser.parseSynonymCount</a></div><div class="ttdeci">static void parseSynonymCount(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:114</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a560201e5dac2113ebf8a41b5027a364f"><div class="ttname"><a href="#a560201e5dac2113ebf8a41b5027a364f">TwinFinder.Configuration.OptionsParser.parseNormalize</a></div><div class="ttdeci">static void parseNormalize(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:89</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a8b9df5b96c6fe3810a79872ff93db3bd"><div class="ttname"><a href="#a8b9df5b96c6fe3810a79872ff93db3bd">TwinFinder.Configuration.OptionsParser.parseAbsolutePath</a></div><div class="ttdeci">static void parseAbsolutePath(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:134</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a9254ddca567b6bf39653af8bc8ade4eb"><div class="ttname"><a href="#a9254ddca567b6bf39653af8bc8ade4eb">TwinFinder.Configuration.OptionsParser.parseMode</a></div><div class="ttdeci">static void parseMode(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:83</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_abe293f7472d43ff886ea279d828b9e5e"><div class="ttname"><a href="#abe293f7472d43ff886ea279d828b9e5e">TwinFinder.Configuration.OptionsParser.parsePairsToFind</a></div><div class="ttdeci">static void parsePairsToFind(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:101</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_ad776da1287b58d9ca5e69fc14dd051ec"><div class="ttname"><a href="#ad776da1287b58d9ca5e69fc14dd051ec">TwinFinder.Configuration.OptionsParser.parseLanguage</a></div><div class="ttdeci">static void parseLanguage(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:127</div></div>
 </div><!-- fragment -->
+<p>Functions used for parsing selected options. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

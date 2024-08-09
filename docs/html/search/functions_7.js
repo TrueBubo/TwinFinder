@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isvalid_0',['isValid',['../classTwinFinder_1_1Configuration_1_1Options.html#a0c2edeb1a0bfa1fb234490e43e2dde33',1,'TwinFinder::Configuration::Options']]]
+  ['khighest_0',['KHighest',['../classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#aa8e2c3ee593aa69d91c67a20cac1cd74',1,'TwinFinder::ContentAnalysis::Closest::KHighest']]]
 ];

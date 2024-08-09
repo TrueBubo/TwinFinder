@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mergeheaps_0',['mergeHeaps',['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a6399a62ad11b50269a10eca29c7eb023',1,'TwinFinder::ContentAnalysis::Closest']]]
+  ['optionsparser_0',['OptionsParser',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a2a5d7c4e0abda937fc63ba75f613fef3',1,'TwinFinder::Configuration::OptionsParser']]]
 ];

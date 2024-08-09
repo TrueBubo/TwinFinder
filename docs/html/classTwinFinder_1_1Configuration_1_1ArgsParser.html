@@ -106,23 +106,32 @@ $(function(){initNavTree('classTwinFinder_1_1Configuration_1_1ArgsParser.html','
   <div class="headertitle"><div class="title">TwinFinder.Configuration.ArgsParser Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles arguments given from the command line.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html">Args</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dataclass holding parsed command line arguments.  <a href="classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1dbf3b0aeb7fc9d62635fe869a22e7e0" id="r_a1dbf3b0aeb7fc9d62635fe869a22e7e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html">Args</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dbf3b0aeb7fc9d62635fe869a22e7e0">parse</a> (String[] args)</td></tr>
+<tr class="memdesc:a1dbf3b0aeb7fc9d62635fe869a22e7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses command line arguments.  <br /></td></tr>
 <tr class="separator:a1dbf3b0aeb7fc9d62635fe869a22e7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a50fe408b59ccadb79eca8c519e94ef34" id="r_a50fe408b59ccadb79eca8c519e94ef34"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50fe408b59ccadb79eca8c519e94ef34">_validOptions</a></td></tr>
+<tr class="memdesc:a50fe408b59ccadb79eca8c519e94ef34"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Flag, Name in <a class="el" href="classTwinFinder_1_1Configuration_1_1OptionsParser.html" title="Class managing parsing of all options given from both the config file and command line arguments.">OptionsParser</a>).  <br /></td></tr>
 <tr class="separator:a50fe408b59ccadb79eca8c519e94ef34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles arguments given from the command line. </p>
+<p>The object will contains Hashtable with set options, and locations of files given. Files are automatically parsed from patterns by the user's shell. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1dbf3b0aeb7fc9d62635fe869a22e7e0" name="a1dbf3b0aeb7fc9d62635fe869a22e7e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1dbf3b0aeb7fc9d62635fe869a22e7e0">&#9670;&#160;</a></span>parse()</h2>
 
@@ -145,6 +154,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Parses command line arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>command line arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html" title="Dataclass holding parsed command line arguments.">Args</a> with set options and content locations </dd></dl>
 
 </div>
 </div>
@@ -178,6 +196,12 @@ Private Attributes</h2></td></tr>
 <div class="line">            { <span class="stringliteral">&quot;--absolute&quot;</span>, <span class="stringliteral">&quot;useAbsolutePaths&quot;</span> }</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
+<p>(Flag, Name in <a class="el" href="classTwinFinder_1_1Configuration_1_1OptionsParser.html" title="Class managing parsing of all options given from both the config file and command line arguments.">OptionsParser</a>). </p>
+<ul>
+<li>Key in dictionary corresponds to the flag to be used in the terminal.</li>
+<li>Value is the name in <a class="el" href="classTwinFinder_1_1Configuration_1_1OptionsParser.html" title="Class managing parsing of all options given from both the config file and command line arguments.">OptionsParser</a> </li>
+</ul>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

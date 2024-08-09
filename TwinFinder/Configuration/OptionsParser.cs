@@ -2,19 +2,26 @@ using System.Collections;
 
 namespace TwinFinder.Configuration;
 
+/** Class managing parsing of all options given from both the config file and command line arguments
+ * 
+ */
 public class OptionsParser {
     private static OptionsParser? _instance; // Singleton
     private static readonly object Lock = new(); // Prevents race condition
 
 
-    // Default settings
+    /** Will store the options set
+     * Starts with default settings
+     */
     private Options _options = new();
     public Options options => _options;
 
+    /** Location of the contents to be compared */
     private String[]? _contentLoc;
 
     public String[]? contentLoc => _contentLoc;
 
+    /** Functions used for parsing selected options */
     private static readonly Dictionary<string, Action<Hashtable, string, Options>> OptionSettingFunctions =
         new() {
             { "mode", parseMode },
@@ -31,50 +38,49 @@ public class OptionsParser {
             _instance = this;
 
             // Loads settings from config file
-            if (File.Exists(loc)) {
-                if (!loadConfigFile(configReader, loc)) Environment.Exit(1);
-            }
+            if (File.Exists(loc)) loadConfigFile(configReader, loc);
             else Console.Error.WriteLine($"Config file {loc} does not exist");
 
-            if (!loadArgs(args)) Environment.Exit(1);
+            loadArgs(args);
         }
     }
-
-    private bool loadConfigFile(IConfigReader configReader, String loc) {
+    
+    /** Sets options from config file */
+    private void loadConfigFile(IConfigReader configReader, String loc) {
         Hashtable configOptions = configReader.parse(loc);
         setOptions(configOptions);
-
-        // Ensures we do not continue with an invalid config
-        if (options.isValid()) return true;
-        Console.Error.WriteLine($"There is a mistake in {loc}, please before continuing fix the config file");
-        return false;
     }
 
-    private bool loadArgs(String[] args) {
+    /** Sets options from command line arguments */
+    private void loadArgs(String[] args) {
         ArgsParser.Args cmdOptions = new ArgsParser().parse(args);
         _contentLoc = cmdOptions.contentLocations;
         setOptions(cmdOptions.options);
-        if (options.isValid()) return true;
-        Console.Error.WriteLine($"Program arguments you have entered are not valid");
-        return false;
     }
 
+    /** Sets given option
+     * @param configOption Hashtable with options set
+     * @param nameInTable How is the option known in configuration
+     * @param update Function, which updates options
+     * @return Success
+     */
     private bool setOption(Hashtable configOption, String nameInTable, Action<Hashtable, String, Options> update) {
         if (!configOption.ContainsKey(nameInTable)) return false;
         update(configOption, nameInTable, _options);
         return true;
     }
-
+    
+    /** Sets options parsed
+     * @param configOption Hashtable with options set
+     */
     private void setOptions(Hashtable configOptions) {
         foreach (var pair in OptionSettingFunctions) {
             if (setOption(configOptions, pair.Key, pair.Value)) configOptions.Remove(pair.Key);
         }
 
         foreach (String key in configOptions.Keys) {
-            Console.Error.WriteLine($"Unknown option {key}, exiting...");
+            Console.Error.WriteLine($"Unknown option {key}");
         }
-
-        if (configOptions.Count > 0) Environment.Exit(1);
     }
 
     private static void parseMode(Hashtable table, String nameInTable, Options options) {

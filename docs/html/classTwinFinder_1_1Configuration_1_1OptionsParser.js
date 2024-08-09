@@ -1,8 +1,8 @@
 var classTwinFinder_1_1Configuration_1_1OptionsParser =
 [
     [ "OptionsParser", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a2a5d7c4e0abda937fc63ba75f613fef3", null ],
-    [ "loadArgs", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#abd5e0fd23a9eba9231123b0fdb0db70e", null ],
-    [ "loadConfigFile", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a1408213600aac476522e567589d9a8c0", null ],
+    [ "loadArgs", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#ae819a3dba5191b76aab5967a930dd8be", null ],
+    [ "loadConfigFile", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a4fc691f620f28849939d68932e66ce40", null ],
     [ "parseAbsolutePath", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a8b9df5b96c6fe3810a79872ff93db3bd", null ],
     [ "parseLanguage", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#ad776da1287b58d9ca5e69fc14dd051ec", null ],
     [ "parseMode", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a9254ddca567b6bf39653af8bc8ade4eb", null ],

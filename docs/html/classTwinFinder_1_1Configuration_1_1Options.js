@@ -6,7 +6,6 @@ var classTwinFinder_1_1Configuration_1_1Options =
     [ "Mode", "classTwinFinder_1_1Configuration_1_1Options.html#aa6224cdddd8cb6ccf28f95eaba8b6ec6", [
       [ "Closest", "classTwinFinder_1_1Configuration_1_1Options.html#aa6224cdddd8cb6ccf28f95eaba8b6ec6a0c89b66f6bdfb128781e2c68d43364d8", null ]
     ] ],
-    [ "isValid", "classTwinFinder_1_1Configuration_1_1Options.html#a0c2edeb1a0bfa1fb234490e43e2dde33", null ],
     [ "setLanguage", "classTwinFinder_1_1Configuration_1_1Options.html#a5ef0f77d88109959a42bc4da1678330e", null ],
     [ "setMode", "classTwinFinder_1_1Configuration_1_1Options.html#ac98f229f7125505085887084997fae16", null ],
     [ "_language", "classTwinFinder_1_1Configuration_1_1Options.html#af59b53624e28f3a5ab4a5b5e67617267", null ],
