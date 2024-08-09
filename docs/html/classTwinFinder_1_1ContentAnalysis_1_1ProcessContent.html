@@ -105,28 +105,38 @@ $(function(){initNavTree('classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.h
   <div class="headertitle"><div class="title">TwinFinder.ContentAnalysis.ProcessContent Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Processes Content based on options set.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab418c56cc091c8db1f2d36785bb316da" id="r_ab418c56cc091c8db1f2d36785bb316da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab418c56cc091c8db1f2d36785bb316da">ProcessContent</a> (<a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> options)</td></tr>
 <tr class="separator:ab418c56cc091c8db1f2d36785bb316da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab771890ebc2015b4d06229a8095db9e8" id="r_ab771890ebc2015b4d06229a8095db9e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab771890ebc2015b4d06229a8095db9e8">processContent</a> (String loc, <a class="el" href="interfaceTwinFinder_1_1ContentIO_1_1IWordsParser.html">IWordsParser</a> parser, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> options)</td></tr>
+<tr class="memdesc:ab771890ebc2015b4d06229a8095db9e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process individual contents.  <br /></td></tr>
 <tr class="separator:ab771890ebc2015b4d06229a8095db9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e39718cbcb296120eb8c6c920239d9" id="r_a00e39718cbcb296120eb8c6c920239d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html">HeapEntry</a>&lt; String[]&gt;[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e39718cbcb296120eb8c6c920239d9">getTwinFiles</a> (<a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> options)</td></tr>
+<tr class="memdesc:a00e39718cbcb296120eb8c6c920239d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets similar contents based on options given.  <br /></td></tr>
 <tr class="separator:a00e39718cbcb296120eb8c6c920239d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a543a32df87c5359e5a5dea26039ac431" id="r_a543a32df87c5359e5a5dea26039ac431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a543a32df87c5359e5a5dea26039ac431">padFrequencies</a> (String loc)</td></tr>
+<tr class="memdesc:a543a32df87c5359e5a5dea26039ac431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pads frequencies with 0s.  <br /></td></tr>
 <tr class="separator:a543a32df87c5359e5a5dea26039ac431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab719f42db735492bbabbeed582ef4f63" id="r_ab719f42db735492bbabbeed582ef4f63"><td class="memItemLeft" align="right" valign="top">ConcurrentDictionary&lt; String, Dictionary&lt; String, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab719f42db735492bbabbeed582ef4f63">_frequencies</a></td></tr>
+<tr class="memdesc:ab719f42db735492bbabbeed582ef4f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequencies of words in a given content (Content, (Word, Frequency))  <br /></td></tr>
 <tr class="separator:ab719f42db735492bbabbeed582ef4f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f657469d4d8776b2c7310461a851e1c" id="r_a9f657469d4d8776b2c7310461a851e1c"><td class="memItemLeft" align="right" valign="top">ConcurrentBag&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f657469d4d8776b2c7310461a851e1c">_uniqueWords</a> = new ConcurrentBag&lt;String&gt;()</td></tr>
+<tr class="memdesc:a9f657469d4d8776b2c7310461a851e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique words across all the contents.  <br /></td></tr>
 <tr class="separator:a9f657469d4d8776b2c7310461a851e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af96f51976ced3985a059a826a28fa554" id="r_af96f51976ced3985a059a826a28fa554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html">Synonyms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af96f51976ced3985a059a826a28fa554">_synonyms</a> = new <a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html">Synonyms</a>()</td></tr>
 <tr class="separator:af96f51976ced3985a059a826a28fa554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Processes Content based on options set. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab418c56cc091c8db1f2d36785bb316da" name="ab418c56cc091c8db1f2d36785bb316da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab418c56cc091c8db1f2d36785bb316da">&#9670;&#160;</a></span>ProcessContent()</h2>
 
@@ -176,6 +186,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets similar contents based on options given. </p>
+<dl class="section return"><dt>Returns</dt><dd>Most similar contents </dd></dl>
+
 </div>
 </div>
 <a id="a543a32df87c5359e5a5dea26039ac431" name="a543a32df87c5359e5a5dea26039ac431"></a>
@@ -200,6 +213,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pads frequencies with 0s. </p>
 
 </div>
 </div>
@@ -235,6 +250,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Process individual contents. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loc</td><td>Location of the content </td></tr>
+    <tr><td class="paramname">parser</td><td>Parser for getting content from the given location </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -260,6 +284,8 @@ Private Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <span class="keyword">new</span> ConcurrentDictionary&lt;String, Dictionary&lt;String, int&gt;&gt;()</div>
 </div><!-- fragment -->
+<p>Frequencies of words in a given content (Content, (Word, Frequency)) </p>
+
 </div>
 </div>
 <a id="af96f51976ced3985a059a826a28fa554" name="af96f51976ced3985a059a826a28fa554"></a>
@@ -303,6 +329,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Unique words across all the contents. </p>
 
 </div>
 </div>

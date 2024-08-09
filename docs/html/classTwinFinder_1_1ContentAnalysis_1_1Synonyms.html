@@ -101,16 +101,21 @@ $(function(){initNavTree('classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html','
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TwinFinder.ContentAnalysis.Synonyms Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Loads synonyms of words <a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html" title="Loads synonyms of words Synonyms will depend on set language.">Synonyms</a> will depend on set language.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html">Word</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data class for storing words with their synonyms.  <a href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -122,17 +127,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73535c49a20a8f29e4009fe1b27fac85" id="r_a73535c49a20a8f29e4009fe1b27fac85"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73535c49a20a8f29e4009fe1b27fac85">get</a> (String word)</td></tr>
 <tr class="separator:a73535c49a20a8f29e4009fe1b27fac85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae91da90b2bafcc26593d3a353be698d9" id="r_ae91da90b2bafcc26593d3a353be698d9"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; String, List&lt; String &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae91da90b2bafcc26593d3a353be698d9">loadSynonyms</a> (String synonymFile, int synonymCount)</td></tr>
+<tr class="memdesc:ae91da90b2bafcc26593d3a353be698d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads synonyms from file.  <br /></td></tr>
+<tr class="separator:ae91da90b2bafcc26593d3a353be698d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9449107401a3f17480b99cd8d67c405b" id="r_a9449107401a3f17480b99cd8d67c405b"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; String, List&lt; String &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9449107401a3f17480b99cd8d67c405b">_synonyms</a> = new Dictionary&lt;string, List&lt;string&gt;&gt;()</td></tr>
+<tr class="memitem:a9449107401a3f17480b99cd8d67c405b" id="r_a9449107401a3f17480b99cd8d67c405b"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; String, List&lt; String &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9449107401a3f17480b99cd8d67c405b">_synonyms</a> = new Dictionary&lt;String, List&lt;String&gt;&gt;()</td></tr>
 <tr class="separator:a9449107401a3f17480b99cd8d67c405b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a18bf079dde49dad984fbb3ac179b2c87" id="r_a18bf079dde49dad984fbb3ac179b2c87"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html#a6896a3e72b9fba1196b6be37aa6ad5fe">Options.Language</a>, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18bf079dde49dad984fbb3ac179b2c87">SynonymsFile</a></td></tr>
+<tr class="memdesc:a18bf079dde49dad984fbb3ac179b2c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Files with synonyms for given languages.  <br /></td></tr>
 <tr class="separator:a18bf079dde49dad984fbb3ac179b2c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Loads synonyms of words <a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html" title="Loads synonyms of words Synonyms will depend on set language.">Synonyms</a> will depend on set language. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a099cdb605698dff66871a0bb1d6c33c2" name="a099cdb605698dff66871a0bb1d6c33c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a099cdb605698dff66871a0bb1d6c33c2">&#9670;&#160;</a></span>Synonyms() <span class="overload">[1/2]</span></h2>
 
@@ -213,6 +227,45 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae91da90b2bafcc26593d3a353be698d9" name="ae91da90b2bafcc26593d3a353be698d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae91da90b2bafcc26593d3a353be698d9">&#9670;&#160;</a></span>loadSynonyms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt; String, List&lt; String &gt; &gt; TwinFinder.ContentAnalysis.Synonyms.loadSynonyms </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>synonymFile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>synonymCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads synonyms from file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">synonymFile</td><td>File to get synonyms from </td></tr>
+    <tr><td class="paramname">synonymCount</td><td>Maximum number of synonyms for one word </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dictionary with words as keys and synonyms as values </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a9449107401a3f17480b99cd8d67c405b" name="a9449107401a3f17480b99cd8d67c405b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9449107401a3f17480b99cd8d67c405b">&#9670;&#160;</a></span>_synonyms</h2>
@@ -224,7 +277,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Dictionary&lt;String, List&lt;String&gt; &gt; TwinFinder.ContentAnalysis.Synonyms._synonyms = new Dictionary&lt;string, List&lt;string&gt;&gt;()</td>
+          <td class="memname">Dictionary&lt;String, List&lt;String&gt; &gt; TwinFinder.ContentAnalysis.Synonyms._synonyms = new Dictionary&lt;String, List&lt;String&gt;&gt;()</td>
         </tr>
       </table>
   </td>
@@ -259,6 +312,8 @@ Static Private Attributes</h2></td></tr>
 <div class="line">        { Options.Language.English, Path.Combine(<span class="stringliteral">&quot;SynonymsFiles&quot;</span>, <span class="stringliteral">&quot;synonyms-en.jsonl&quot;</span>) }</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+<p>Files with synonyms for given languages. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

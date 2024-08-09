@@ -4,6 +4,7 @@ using TwinFinder.ContentIO;
 
 namespace TwinFinder.ContentAnalysis;
 
+/** DS for bundling Key with Priority */
 public class HeapEntry<TL> {
     public readonly TL Key;
     public readonly double Priority;
@@ -14,10 +15,15 @@ public class HeapEntry<TL> {
     }
 }
 
+/** Processes Content based on options set */
 public class ProcessContent {
+    /** Frequencies of words in a given content
+     * (Content, (Word, Frequency))
+     */
     private ConcurrentDictionary<String, Dictionary<String, int>> _frequencies =
         new ConcurrentDictionary<String, Dictionary<String, int>>();
 
+    /** Unique words across all the contents */
     private ConcurrentBag<String> _uniqueWords = new ConcurrentBag<String>();
     private Synonyms _synonyms = new Synonyms();
 
@@ -33,6 +39,10 @@ public class ProcessContent {
         }
     }
 
+    /** Process individual contents
+     * @param loc Location of the content
+     * @param parser Parser for getting content from the given location
+     */
     public void processContent(String loc, IWordsParser parser, Options options) {
         String[] words = parser.parse(loc, options.normalizeWords);
 
@@ -61,7 +71,10 @@ public class ProcessContent {
             }
         }
     }
-
+    
+    /** Gets similar contents based on options given
+     * @return Most similar contents
+     */
     public HeapEntry<String[]>[] getTwinFiles(Options options) {
         switch (options.mode) {
             case Options.Mode.Closest:
@@ -85,7 +98,7 @@ public class ProcessContent {
         }
     }
 
-    // Pads frequencies with 0s, so every file contains the same keys to make comparing easier
+    /** Pads frequencies with 0s */
     public void padFrequencies(String loc) {
         foreach (string word in _uniqueWords) {
             if (!_frequencies[loc].ContainsKey(word)) _frequencies[loc][word] = 0;

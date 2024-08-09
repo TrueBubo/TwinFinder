@@ -3,21 +3,43 @@ using TwinFinder.Configuration;
 
 namespace TwinFinder.ContentAnalysis;
 
+/** Finds most similar contents based on how close they are lexicographically.
+ * @tparam TK Datatype of words
+ */
 public class Closest<TK> where TK : notnull {
+    /** Frequencies of words in content.
+     * (Location, (Word, Frequency))
+     */
     private readonly ConcurrentDictionary<String, Dictionary<TK, int>> _vectors;
+    /** Keys to _vectors with their index.*/
     private readonly String[] _indexes;
     private readonly Options _options;
 
+    /** Datastructure for holding K largest values.
+     * @tparam TL key in heap
+     */
     public class KHighest<TL> where TL : notnull {
         private PriorityQueue<TL, double> _heap = new PriorityQueue<TL, double>();
         private Dictionary<TL, double> _priorities = new Dictionary<TL, double>();
+        
+        /** Maximum capacity the data structure will hold. */
         private readonly int _capacity;
+        
+        /** Number of elements in the DS. */
         public int count => _heap.Count;
 
+        /*
+         * @param capacity The size of this DS will not exceed this size
+         */
         public KHighest(int capacity = int.MaxValue) {
             this._capacity = capacity;
         }
 
+        /** Adds element.
+         * priority will be stored as negative to convert min heap to max heap
+         * @param element Key in heap
+         * @param priority How important the element is
+         */
         public void enqueue(TL element, double priority) {
             _priorities.Add(element, priority);
             _heap.Enqueue(element, -priority);
@@ -26,6 +48,9 @@ public class Closest<TK> where TK : notnull {
             }
         }
 
+        /** Pops element from the DS.
+         * @return HeapEntry with the element, and the original priority given
+         */
         public HeapEntry<TL>? dequeue() {
             if (count == 0) return null;
             TL element = _heap.Dequeue();
@@ -41,7 +66,13 @@ public class Closest<TK> where TK : notnull {
         _options = options;
     }
 
-    // Heap returns them in reverse order
+    /** Finds k vectors which are closest to each other
+     * Heap returns them in reverse order
+     * @param k How many to return
+     * @param from Which vectors are going to be processed on this call
+     * @param to Which vectors are going to be processed on this call
+     * @return Pairs of Keys to vectors, which were found to be the closest
+     */
     public KHighest<String[]> getKClosest(int k, int from, int to) {
         if (from < 0 || to >= _indexes.Length) {
             Console.Error.WriteLine("Range shrank to be inside the array");
@@ -80,11 +111,16 @@ public class Closest<TK> where TK : notnull {
         return mergeHeaps(left, right);
     }
 
+    /** Helper function to merge heaps returned from getKClosest recursive calls
+     * @param heap1 Heap to be merged
+     * @param heap2 Heap to be merged
+     * @return Merged heap
+     */
     private KHighest<String[]> mergeHeaps(KHighest<String[]> heap1, KHighest<String[]> heap2) {
         KHighest<String[]> final = new KHighest<String[]>(_options.pairsToFind);
         while (heap1.count > 0) {
             HeapEntry<String[]>? entry = heap1.dequeue();
-            if (entry == null) continue; // This path will not should never happen
+            if (entry == null) continue; // This path should never happen
             final.enqueue(entry.Key, entry.Priority);
         }
 
@@ -97,6 +133,12 @@ public class Closest<TK> where TK : notnull {
         return final;
     }
 
+    /** Determine how similar vectors are based on the angle between them
+     * The higher the return value, the more similar they are
+     * @param v1 First vector
+     * @param v2 Second vector
+     * @return cosine of the angle between them
+     */
     static double cosineSimilarity(Dictionary<TK, int> v1, Dictionary<TK, int> v2) {
         HashSet<TK> keys = new HashSet<TK>(v1.Keys);
         keys.UnionWith(v2.Keys);

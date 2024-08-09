@@ -108,10 +108,14 @@ $(function(){initNavTree('classTwinFinder_1_1ContentAnalysis_1_1Closest.html',''
   <div class="headertitle"><div class="title">TwinFinder.ContentAnalysis.Closest&lt; TK &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Finds most similar contents based on how close they are lexicographically.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html">KHighest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Datastructure for holding K largest values.  <a href="classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -119,28 +123,49 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa92c28186ce96063b63f25b01c88ece8" id="r_aa92c28186ce96063b63f25b01c88ece8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92c28186ce96063b63f25b01c88ece8">Closest</a> (ConcurrentDictionary&lt; String, Dictionary&lt; TK, int &gt; &gt; vectors, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> options)</td></tr>
 <tr class="separator:aa92c28186ce96063b63f25b01c88ece8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3fdad453c5f71127db91ce89f7500d5" id="r_ac3fdad453c5f71127db91ce89f7500d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html">KHighest</a>&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3fdad453c5f71127db91ce89f7500d5">getKClosest</a> (int k, int from, int to)</td></tr>
+<tr class="memdesc:ac3fdad453c5f71127db91ce89f7500d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds k vectors which are closest to each other Heap returns them in reverse order.  <br /></td></tr>
 <tr class="separator:ac3fdad453c5f71127db91ce89f7500d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a6399a62ad11b50269a10eca29c7eb023" id="r_a6399a62ad11b50269a10eca29c7eb023"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html">KHighest</a>&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6399a62ad11b50269a10eca29c7eb023">mergeHeaps</a> (<a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html">KHighest</a>&lt; String[]&gt; heap1, <a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html">KHighest</a>&lt; String[]&gt; heap2)</td></tr>
+<tr class="memdesc:a6399a62ad11b50269a10eca29c7eb023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to merge heaps returned from getKClosest recursive calls.  <br /></td></tr>
 <tr class="separator:a6399a62ad11b50269a10eca29c7eb023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a789f02920d51d23531940c4198a8bf7e" id="r_a789f02920d51d23531940c4198a8bf7e"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a789f02920d51d23531940c4198a8bf7e">cosineSimilarity</a> (Dictionary&lt; TK, int &gt; v1, Dictionary&lt; TK, int &gt; v2)</td></tr>
+<tr class="memdesc:a789f02920d51d23531940c4198a8bf7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine how similar vectors are based on the angle between them The higher the return value, the more similar they are.  <br /></td></tr>
 <tr class="separator:a789f02920d51d23531940c4198a8bf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a5024f7d229dcd52e007cbd29db0582c6" id="r_a5024f7d229dcd52e007cbd29db0582c6"><td class="memItemLeft" align="right" valign="top">readonly ConcurrentDictionary&lt; String, Dictionary&lt; TK, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5024f7d229dcd52e007cbd29db0582c6">_vectors</a></td></tr>
+<tr class="memdesc:a5024f7d229dcd52e007cbd29db0582c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequencies of words in content.  <br /></td></tr>
 <tr class="separator:a5024f7d229dcd52e007cbd29db0582c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a602353d5796968fdf90e35c2be4b066b" id="r_a602353d5796968fdf90e35c2be4b066b"><td class="memItemLeft" align="right" valign="top">readonly String[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a602353d5796968fdf90e35c2be4b066b">_indexes</a></td></tr>
+<tr class="memdesc:a602353d5796968fdf90e35c2be4b066b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keys to _vectors with their index.  <br /></td></tr>
 <tr class="separator:a602353d5796968fdf90e35c2be4b066b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e25f892aca1f7c8c48fb5ab89ec50c7" id="r_a0e25f892aca1f7c8c48fb5ab89ec50c7"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e25f892aca1f7c8c48fb5ab89ec50c7">_options</a></td></tr>
 <tr class="separator:a0e25f892aca1f7c8c48fb5ab89ec50c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Finds most similar contents based on how close they are lexicographically. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TK</td><td>Datatype of words </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TK</em></td><td>&#160;:</td><td valign="top"><em>notnull</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa92c28186ce96063b63f25b01c88ece8" name="aa92c28186ce96063b63f25b01c88ece8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa92c28186ce96063b63f25b01c88ece8">&#9670;&#160;</a></span>Closest()</h2>
 
@@ -198,6 +223,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Determine how similar vectors are based on the angle between them The higher the return value, the more similar they are. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>First vector </td></tr>
+    <tr><td class="paramname">v2</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cosine of the angle between them </dd></dl>
+
 </div>
 </div>
 <a id="ac3fdad453c5f71127db91ce89f7500d5" name="ac3fdad453c5f71127db91ce89f7500d5"></a>
@@ -232,6 +267,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Finds k vectors which are closest to each other Heap returns them in reverse order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>How many to return </td></tr>
+    <tr><td class="paramname">from</td><td>Which vectors are going to be processed on this call </td></tr>
+    <tr><td class="paramname">to</td><td>Which vectors are going to be processed on this call </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pairs of Keys to vectors, which were found to be the closest </dd></dl>
+
 </div>
 </div>
 <a id="a6399a62ad11b50269a10eca29c7eb023" name="a6399a62ad11b50269a10eca29c7eb023"></a>
@@ -261,6 +307,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Helper function to merge heaps returned from getKClosest recursive calls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heap1</td><td>Heap to be merged </td></tr>
+    <tr><td class="paramname">heap2</td><td>Heap to be merged </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Merged heap </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -283,6 +339,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Keys to _vectors with their index. </p>
 
 </div>
 </div>
@@ -327,6 +385,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Frequencies of words in content. </p>
+<p>(Location, (Word, Frequency)) </p>
 
 </div>
 </div>

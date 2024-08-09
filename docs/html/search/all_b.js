@@ -5,5 +5,6 @@ var searchData=
   ['language_2',['language',['../classTwinFinder_1_1Configuration_1_1Options.html#abd868f7c70375d19e864148bf29a5a79',1,'TwinFinder::Configuration::Options']]],
   ['loadargs_3',['loadArgs',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#ae819a3dba5191b76aab5967a930dd8be',1,'TwinFinder::Configuration::OptionsParser']]],
   ['loadconfigfile_4',['loadConfigFile',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a4fc691f620f28849939d68932e66ce40',1,'TwinFinder::Configuration::OptionsParser']]],
-  ['lock_5',['Lock',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a097121c06bd9b02ec03ad240fe872bc5',1,'TwinFinder::Configuration::OptionsParser']]]
+  ['loadsynonyms_5',['loadSynonyms',['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#ae91da90b2bafcc26593d3a353be698d9',1,'TwinFinder::ContentAnalysis::Synonyms']]],
+  ['lock_6',['Lock',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a097121c06bd9b02ec03ad240fe872bc5',1,'TwinFinder::Configuration::OptionsParser']]]
 ];

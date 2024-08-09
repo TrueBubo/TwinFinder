@@ -106,19 +106,25 @@ $(function(){initNavTree('classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHigh
   <div class="headertitle"><div class="title">TwinFinder.ContentAnalysis.Closest&lt; TK &gt;.KHighest&lt; TL &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Datastructure for holding K largest values.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8e2c3ee593aa69d91c67a20cac1cd74" id="r_aa8e2c3ee593aa69d91c67a20cac1cd74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e2c3ee593aa69d91c67a20cac1cd74">KHighest</a> (int capacity=int.MaxValue)</td></tr>
 <tr class="separator:aa8e2c3ee593aa69d91c67a20cac1cd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48989ff5d061bde16e8bc2abb5fb5cc9" id="r_a48989ff5d061bde16e8bc2abb5fb5cc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48989ff5d061bde16e8bc2abb5fb5cc9">enqueue</a> (TL element, double priority)</td></tr>
+<tr class="memdesc:a48989ff5d061bde16e8bc2abb5fb5cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds element.  <br /></td></tr>
 <tr class="separator:a48989ff5d061bde16e8bc2abb5fb5cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7531c4d43879aad35cb6fcdfe50e242a" id="r_a7531c4d43879aad35cb6fcdfe50e242a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html">HeapEntry</a>&lt; TL &gt;?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7531c4d43879aad35cb6fcdfe50e242a">dequeue</a> ()</td></tr>
+<tr class="memdesc:a7531c4d43879aad35cb6fcdfe50e242a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops element from the DS.  <br /></td></tr>
 <tr class="separator:a7531c4d43879aad35cb6fcdfe50e242a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a24ed11cc0b3fb073d01dbb7f60c5a1f7" id="r_a24ed11cc0b3fb073d01dbb7f60c5a1f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24ed11cc0b3fb073d01dbb7f60c5a1f7">count</a><code> [get]</code></td></tr>
+<tr class="memdesc:a24ed11cc0b3fb073d01dbb7f60c5a1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of elements in the DS.  <br /></td></tr>
 <tr class="separator:a24ed11cc0b3fb073d01dbb7f60c5a1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -128,9 +134,26 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2a5d3db0e26a5a7e7ba5ddb0dab3c409" id="r_a2a5d3db0e26a5a7e7ba5ddb0dab3c409"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; TL, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a5d3db0e26a5a7e7ba5ddb0dab3c409">_priorities</a> = new Dictionary&lt;TL, double&gt;()</td></tr>
 <tr class="separator:a2a5d3db0e26a5a7e7ba5ddb0dab3c409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e978c779bd4c74d3daaa90e0a9c4fad" id="r_a7e978c779bd4c74d3daaa90e0a9c4fad"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e978c779bd4c74d3daaa90e0a9c4fad">_capacity</a></td></tr>
+<tr class="memdesc:a7e978c779bd4c74d3daaa90e0a9c4fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum capacity the data structure will hold.  <br /></td></tr>
 <tr class="separator:a7e978c779bd4c74d3daaa90e0a9c4fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Datastructure for holding K largest values. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TL</td><td>key in heap </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TL</em></td><td>&#160;:</td><td valign="top"><em>notnull</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa8e2c3ee593aa69d91c67a20cac1cd74" name="aa8e2c3ee593aa69d91c67a20cac1cd74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8e2c3ee593aa69d91c67a20cac1cd74">&#9670;&#160;</a></span>KHighest()</h2>
 
@@ -180,6 +203,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Pops element from the DS. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html" title="DS for bundling Key with Priority.">HeapEntry</a> with the element, and the original priority given </dd></dl>
+
 </div>
 </div>
 <a id="a48989ff5d061bde16e8bc2abb5fb5cc9" name="a48989ff5d061bde16e8bc2abb5fb5cc9"></a>
@@ -209,6 +235,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Adds element. </p>
+<p>priority will be stored as negative to convert min heap to max heap </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>Key in heap </td></tr>
+    <tr><td class="paramname">priority</td><td>How important the element is </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -231,6 +266,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Maximum capacity the data structure will hold. </p>
 
 </div>
 </div>
@@ -298,6 +335,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Number of elements in the DS. </p>
 
 </div>
 </div>
