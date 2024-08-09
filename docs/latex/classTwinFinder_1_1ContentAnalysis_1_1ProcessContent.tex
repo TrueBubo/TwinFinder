@@ -1,0 +1,84 @@
+\doxysection{Twin\+Finder.\+Content\+Analysis.\+Process\+Content Class Reference}
+\hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent}{}\label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab418c56cc091c8db1f2d36785bb316da}{Process\+Content}} (\mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}} options)
+\item 
+void \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab771890ebc2015b4d06229a8095db9e8}{process\+Content}} (String loc, \mbox{\hyperlink{interfaceTwinFinder_1_1ContentIO_1_1IWordsParser}{IWords\+Parser}} parser, \mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}} options)
+\item 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1HeapEntry}{Heap\+Entry}}$<$ String\mbox{[}$\,$\mbox{]}$>$\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a00e39718cbcb296120eb8c6c920239d9}{get\+Twin\+Files}} (\mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}} options)
+\item 
+void \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a543a32df87c5359e5a5dea26039ac431}{pad\+Frequencies}} (String loc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Concurrent\+Dictionary$<$ String, Dictionary$<$ String, int $>$ $>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab719f42db735492bbabbeed582ef4f63}{\+\_\+frequencies}}
+\item 
+Concurrent\+Bag$<$ String $>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a9f657469d4d8776b2c7310461a851e1c}{\+\_\+unique\+Words}} = new Concurrent\+Bag$<$String$>$()
+\item 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Synonyms}{Synonyms}} \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_af96f51976ced3985a059a826a28fa554}{\+\_\+synonyms}} = new \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Synonyms}{Synonyms}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab418c56cc091c8db1f2d36785bb316da}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!ProcessContent@{ProcessContent}}
+\index{ProcessContent@{ProcessContent}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{ProcessContent()}{ProcessContent()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab418c56cc091c8db1f2d36785bb316da} 
+Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+Process\+Content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}}}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a00e39718cbcb296120eb8c6c920239d9}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!getTwinFiles@{getTwinFiles}}
+\index{getTwinFiles@{getTwinFiles}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{getTwinFiles()}{getTwinFiles()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a00e39718cbcb296120eb8c6c920239d9} 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1HeapEntry}{Heap\+Entry}}$<$ String\mbox{[}$\,$\mbox{]}$>$\mbox{[}$\,$\mbox{]} Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+get\+Twin\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}}}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a543a32df87c5359e5a5dea26039ac431}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!padFrequencies@{padFrequencies}}
+\index{padFrequencies@{padFrequencies}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{padFrequencies()}{padFrequencies()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a543a32df87c5359e5a5dea26039ac431} 
+void Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+pad\+Frequencies (\begin{DoxyParamCaption}\item[{String}]{loc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab771890ebc2015b4d06229a8095db9e8}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!processContent@{processContent}}
+\index{processContent@{processContent}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{processContent()}{processContent()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab771890ebc2015b4d06229a8095db9e8} 
+void Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+process\+Content (\begin{DoxyParamCaption}\item[{String}]{loc}{, }\item[{\mbox{\hyperlink{interfaceTwinFinder_1_1ContentIO_1_1IWordsParser}{IWords\+Parser}}}]{parser}{, }\item[{\mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}}}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab719f42db735492bbabbeed582ef4f63}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!\_frequencies@{\_frequencies}}
+\index{\_frequencies@{\_frequencies}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{\_frequencies}{\_frequencies}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_ab719f42db735492bbabbeed582ef4f63} 
+Concurrent\+Dictionary$<$String, Dictionary$<$String, int$>$ $>$ Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+\_\+frequencies\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ ConcurrentDictionary<String,\ Dictionary<String,\ int>>()}
+
+\end{DoxyCode}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_af96f51976ced3985a059a826a28fa554}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!\_synonyms@{\_synonyms}}
+\index{\_synonyms@{\_synonyms}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{\_synonyms}{\_synonyms}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_af96f51976ced3985a059a826a28fa554} 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Synonyms}{Synonyms}} Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+\_\+synonyms = new \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Synonyms}{Synonyms}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a9f657469d4d8776b2c7310461a851e1c}\index{TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}!\_uniqueWords@{\_uniqueWords}}
+\index{\_uniqueWords@{\_uniqueWords}!TwinFinder.ContentAnalysis.ProcessContent@{TwinFinder.ContentAnalysis.ProcessContent}}
+\doxysubsubsection{\texorpdfstring{\_uniqueWords}{\_uniqueWords}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1ProcessContent_a9f657469d4d8776b2c7310461a851e1c} 
+Concurrent\+Bag$<$String$>$ Twin\+Finder.\+Content\+Analysis.\+Process\+Content.\+\_\+unique\+Words = new Concurrent\+Bag$<$String$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Twin\+Finder/\+Content\+Analysis/\mbox{\hyperlink{ProcessContent_8cs}{Process\+Content.\+cs}}\end{DoxyCompactItemize}

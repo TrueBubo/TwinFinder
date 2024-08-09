@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['_5fcapacity_0',['_capacity',['../classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#a7e978c779bd4c74d3daaa90e0a9c4fad',1,'TwinFinder::ContentAnalysis::Closest::KHighest']]],
+  ['_5fcontentloc_1',['_contentLoc',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#ab65008bd8f7a5b1e1140c02be36afa13',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['_5fcontentlocations_2',['_contentLocations',['../classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html#a442d680208ee0c3aa665519f4c16982f',1,'TwinFinder::Configuration::ArgsParser::Args']]],
+  ['_5fcurrentpath_3',['_currentPath',['../classTwinFinder_1_1ContentFinding_1_1FilesFinder.html#a4916016bf3018af0254db1ec637034ce',1,'TwinFinder::ContentFinding::FilesFinder']]],
+  ['_5ffrequencies_4',['_frequencies',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab719f42db735492bbabbeed582ef4f63',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['_5fheap_5',['_heap',['../classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#a8efa89f4fc8754ecae591b7213046fc7',1,'TwinFinder::ContentAnalysis::Closest::KHighest']]],
+  ['_5findexes_6',['_indexes',['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a602353d5796968fdf90e35c2be4b066b',1,'TwinFinder::ContentAnalysis::Closest']]],
+  ['_5finstance_7',['_instance',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#afa831315fc919465974bc736f972b2a5',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['_5flanguage_8',['_language',['../classTwinFinder_1_1Configuration_1_1Options.html#af59b53624e28f3a5ab4a5b5e67617267',1,'TwinFinder::Configuration::Options']]],
+  ['_5flanguages_9',['_languages',['../classTwinFinder_1_1Configuration_1_1Options.html#afbfed27dea337332e040433263160fe4',1,'TwinFinder::Configuration::Options']]],
+  ['_5fmode_10',['_mode',['../classTwinFinder_1_1Configuration_1_1Options.html#a6c92d3876352a1672878c54a85d1705e',1,'TwinFinder::Configuration::Options']]],
+  ['_5fmodes_11',['_modes',['../classTwinFinder_1_1Configuration_1_1Options.html#a639f753b282f7fc553fcd4c5c18cddfe',1,'TwinFinder::Configuration::Options']]],
+  ['_5fnormalizewords_12',['_normalizeWords',['../classTwinFinder_1_1Configuration_1_1Options.html#aa730a0e486c805b6fa809e7d6061dd65',1,'TwinFinder::Configuration::Options']]],
+  ['_5foptions_13',['_options',['../classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html#ab024e126e620f271d93d358d989fe114',1,'TwinFinder.Configuration.ArgsParser.Args._options'],['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#ad671f9fea0804bd7412fbd77dd394038',1,'TwinFinder.Configuration.OptionsParser._options'],['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a0e25f892aca1f7c8c48fb5ab89ec50c7',1,'TwinFinder.ContentAnalysis.Closest._options']]],
+  ['_5fpairstofind_14',['_pairsToFind',['../classTwinFinder_1_1Configuration_1_1Options.html#a055fe33776ca28432b7f35172eed0e93',1,'TwinFinder::Configuration::Options']]],
+  ['_5fpriorities_15',['_priorities',['../classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#a2a5d3db0e26a5a7e7ba5ddb0dab3c409',1,'TwinFinder::ContentAnalysis::Closest::KHighest']]],
+  ['_5fsynonymcount_16',['_synonymCount',['../classTwinFinder_1_1Configuration_1_1Options.html#a44b530be2f78b19f0fd85feaa127c3c2',1,'TwinFinder::Configuration::Options']]],
+  ['_5fsynonyms_17',['_synonyms',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#af96f51976ced3985a059a826a28fa554',1,'TwinFinder.ContentAnalysis.ProcessContent._synonyms'],['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#a9449107401a3f17480b99cd8d67c405b',1,'TwinFinder.ContentAnalysis.Synonyms._synonyms']]],
+  ['_5funiquewords_18',['_uniqueWords',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a9f657469d4d8776b2c7310461a851e1c',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['_5fuseabsolutepaths_19',['_useAbsolutePaths',['../classTwinFinder_1_1Configuration_1_1Options.html#a496aabe0e8ee81c553bb3fb5ac1081e2',1,'TwinFinder::Configuration::Options']]],
+  ['_5fvalidoptions_20',['_validOptions',['../classTwinFinder_1_1Configuration_1_1ArgsParser.html#a50fe408b59ccadb79eca8c519e94ef34',1,'TwinFinder::Configuration::ArgsParser']]],
+  ['_5fvectors_21',['_vectors',['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a5024f7d229dcd52e007cbd29db0582c6',1,'TwinFinder::ContentAnalysis::Closest']]]
+];

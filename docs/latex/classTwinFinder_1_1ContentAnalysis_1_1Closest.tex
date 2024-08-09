@@ -1,0 +1,89 @@
+\doxysection{Twin\+Finder.\+Content\+Analysis.\+Closest\texorpdfstring{$<$}{<} TK \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest}{}\label{classTwinFinder_1_1ContentAnalysis_1_1Closest}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_aa92c28186ce96063b63f25b01c88ece8}{Closest}} (Concurrent\+Dictionary$<$ String, Dictionary$<$ TK, int $>$ $>$ vectors, \mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}} options)
+\item 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_ac3fdad453c5f71127db91ce89f7500d5}{get\+KClosest}} (int k, int from, int to)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_a6399a62ad11b50269a10eca29c7eb023}{merge\+Heaps}} (\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$ heap1, \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$ heap2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_a789f02920d51d23531940c4198a8bf7e}{cosine\+Similarity}} (Dictionary$<$ TK, int $>$ v1, Dictionary$<$ TK, int $>$ v2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Concurrent\+Dictionary$<$ String, Dictionary$<$ TK, int $>$ $>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_a5024f7d229dcd52e007cbd29db0582c6}{\+\_\+vectors}}
+\item 
+readonly String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_a602353d5796968fdf90e35c2be4b066b}{\+\_\+indexes}}
+\item 
+readonly \mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}} \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_a0e25f892aca1f7c8c48fb5ab89ec50c7}{\+\_\+options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_aa92c28186ce96063b63f25b01c88ece8}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!Closest@{Closest}}
+\index{Closest@{Closest}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{Closest()}{Closest()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_aa92c28186ce96063b63f25b01c88ece8} 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Closest}} (\begin{DoxyParamCaption}\item[{Concurrent\+Dictionary$<$ String, Dictionary$<$ TK, int $>$ $>$}]{vectors}{, }\item[{\mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}}}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_a789f02920d51d23531940c4198a8bf7e}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!cosineSimilarity@{cosineSimilarity}}
+\index{cosineSimilarity@{cosineSimilarity}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{cosineSimilarity()}{cosineSimilarity()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_a789f02920d51d23531940c4198a8bf7e} 
+static double \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.cosine\+Similarity (\begin{DoxyParamCaption}\item[{Dictionary$<$ TK, int $>$}]{v1}{, }\item[{Dictionary$<$ TK, int $>$}]{v2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_ac3fdad453c5f71127db91ce89f7500d5}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!getKClosest@{getKClosest}}
+\index{getKClosest@{getKClosest}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{getKClosest()}{getKClosest()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_ac3fdad453c5f71127db91ce89f7500d5} 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.get\+KClosest (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{int}]{from}{, }\item[{int}]{to}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_a6399a62ad11b50269a10eca29c7eb023}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!mergeHeaps@{mergeHeaps}}
+\index{mergeHeaps@{mergeHeaps}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{mergeHeaps()}{mergeHeaps()}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_a6399a62ad11b50269a10eca29c7eb023} 
+\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.merge\+Heaps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$}]{heap1}{, }\item[{\mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest}{KHighest}}$<$ String\mbox{[}$\,$\mbox{]}$>$}]{heap2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_a602353d5796968fdf90e35c2be4b066b}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!\_indexes@{\_indexes}}
+\index{\_indexes@{\_indexes}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{\_indexes}{\_indexes}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_a602353d5796968fdf90e35c2be4b066b} 
+readonly String \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.\+\_\+indexes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_a0e25f892aca1f7c8c48fb5ab89ec50c7}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!\_options@{\_options}}
+\index{\_options@{\_options}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{\_options}{\_options}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_a0e25f892aca1f7c8c48fb5ab89ec50c7} 
+readonly \mbox{\hyperlink{classTwinFinder_1_1Configuration_1_1Options}{Options}} \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classTwinFinder_1_1ContentAnalysis_1_1Closest_a5024f7d229dcd52e007cbd29db0582c6}\index{TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}!\_vectors@{\_vectors}}
+\index{\_vectors@{\_vectors}!TwinFinder.ContentAnalysis.Closest$<$ TK $>$@{TwinFinder.ContentAnalysis.Closest$<$ TK $>$}}
+\doxysubsubsection{\texorpdfstring{\_vectors}{\_vectors}}
+{\footnotesize\ttfamily \label{classTwinFinder_1_1ContentAnalysis_1_1Closest_a5024f7d229dcd52e007cbd29db0582c6} 
+readonly Concurrent\+Dictionary$<$String, Dictionary$<$TK, int$>$ $>$ \mbox{\hyperlink{classTwinFinder_1_1ContentAnalysis_1_1Closest}{Twin\+Finder.\+Content\+Analysis.\+Closest}}$<$ TK $>$.\+\_\+vectors\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Twin\+Finder/\+Content\+Analysis/\mbox{\hyperlink{Closest_8cs}{Closest.\+cs}}\end{DoxyCompactItemize}
