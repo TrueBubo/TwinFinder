@@ -6,3 +6,4 @@ synonymCount = 5 # Change to zero to not consider synonyms
 language = "en" # Will be used to understand context of said files
 
 useAbsolutePaths = false # If selected the app will return the full path instead of relative one
+output = "" # The most similar files will be printed here, empty string means standard output

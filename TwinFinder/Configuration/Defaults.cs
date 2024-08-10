@@ -11,4 +11,5 @@ static class Defaults {
     public const int SynonymCount = 5;
     public const Options.Language Language = Options.Language.English;
     public const bool UseAbsolutePaths = false;
+    public const String OutputFile = "";
 }

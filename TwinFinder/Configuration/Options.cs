@@ -8,7 +8,7 @@ public class Options {
     public enum Mode {
         Closest
     }
-    
+
     /** Converts string values into Mode enum. */
     private static Dictionary<String, Mode> _modes = new Dictionary<String, Mode>() {
         { "closest", Mode.Closest }
@@ -27,7 +27,10 @@ public class Options {
      * @return Success
     */
     public bool setMode(String strMode) {
-        if (!_modes.ContainsKey(strMode)) {return false;}
+        if (!_modes.ContainsKey(strMode)) {
+            return false;
+        }
+
         mode = _modes[strMode];
         return true;
     }
@@ -44,12 +47,12 @@ public class Options {
 
     /** Sets how many closest pairs are returned as an output. */
     private int _pairsToFind = Defaults.PairsToFind;
-    
+
     public int pairsToFind {
         get => _pairsToFind;
         set => _pairsToFind = value;
     }
-    
+
     /** Used for finding words similar in meaning to match similar contents more often. */
     private int _synonymCount = Defaults.SynonymCount;
 
@@ -62,19 +65,19 @@ public class Options {
     public enum Language {
         English
     }
-    
+
     /** Converts string values into Language enum. */
     private static Dictionary<String, Language> _languages = new Dictionary<String, Language>() {
-            { "en", Language.English }
+        { "en", Language.English }
     };
 
-    /** Convert Language enum back to String.
+    /** Converts Language enum back to String.
      * Shows languages in human readable form.
      */
     public static readonly Dictionary<Language, String> langToCode = new Dictionary<Language, string>() {
         { Language.English, "en" }
     };
-     
+
     /** Language the content searched is in.
      * Helps with context.
      */
@@ -95,7 +98,7 @@ public class Options {
         language = _languages[langCode];
         return true;
     }
-    
+
     /** Use full paths instead of relative.
      * - If set to true full paths will be used.
      * - If set to false relative paths to the current working directory will be shown.
@@ -105,5 +108,13 @@ public class Options {
     public bool useAbsolutePaths {
         get => _useAbsolutePaths;
         set => _useAbsolutePaths = value;
+    }
+
+    /** If set to print to files, this file will be used */
+    private String _outputFile = Defaults.OutputFile;
+
+    public String outputFile {
+        get => _outputFile;
+        set => _outputFile = value;
     }
 }
