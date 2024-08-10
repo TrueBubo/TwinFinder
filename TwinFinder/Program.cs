@@ -7,16 +7,25 @@ namespace TwinFinder;
 
 internal class Program {
     static void Main(string[] args) {
+        const String projectName = "TwinFinder";
+        
         String cwd = Environment.CurrentDirectory; // Where the program was called from
 
         String basePath = AppDomain.CurrentDomain.BaseDirectory;
         basePath = Path.Combine(basePath, "../../.."); // Go to directory where .cs files are located
         Directory.SetCurrentDirectory(basePath);
 
-
         const String configName = "config.toml";
+        String configs = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        String configLoc = Path.Combine(configs, projectName, configName);
+
+        if (!File.Exists(configLoc)) {
+            Directory.CreateDirectory(Path.GetDirectoryName(configLoc));
+            File.Copy(configName, configLoc);
+        }
+        
         IConfigReader reader = new TomlConfigReader();
-        OptionsParser optionsParser = new OptionsParser(configName, args, reader);
+        OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
         Options options = optionsParser.options;
 
         IContentFinder contentFinder = new FilesFinder();
