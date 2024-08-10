@@ -19,7 +19,8 @@ public class ArgsParser {
             { "-n", "pairsToFind" },
             { "-s", "synonymCount" },
             { "--lang", "language" },
-            { "--absolute", "useAbsolutePaths" }
+            { "--absolute", "useAbsolutePaths" },
+            { "-o", "output"}
         };
 
     /** Dataclass holding parsed command line arguments

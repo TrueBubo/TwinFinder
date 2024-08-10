@@ -29,7 +29,8 @@ public class OptionsParser {
             { "pairsToFind", parsePairsToFind },
             { "synonymCount", parseSynonymCount },
             { "language", parseLanguage },
-            { "useAbsolutePaths", parseAbsolutePath }
+            { "useAbsolutePaths", parseAbsolutePath },
+            { "output", parseOutputFile}
         };
 
     public OptionsParser(String loc, String[] args, IConfigReader configReader) {
@@ -145,4 +146,9 @@ public class OptionsParser {
                 $"Could not convert {value} to boolean. The selected option stays the same");
         }
     }
+    
+    private static void parseOutputFile(Hashtable table, String nameInTable, Options options) {
+            String value = table[nameInTable]?.ToString() ?? "";
+            options.outputFile = value;
+        }
 }
