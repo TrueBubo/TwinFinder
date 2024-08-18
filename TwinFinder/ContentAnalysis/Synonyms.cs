@@ -15,7 +15,7 @@ public class Synonyms {
 
     /** Files with synonyms for given languages */
     private static readonly Dictionary<Options.Language, String> SynonymsFile = new Dictionary<Options.Language, String>() {
-        { Options.Language.English, Path.Combine("SynonymsFiles", "synonyms-en.jsonl") }
+        { Options.Language.English, "synonyms-en.jsonl" }
     };
     
     private Dictionary<String, List<String>> _synonyms = new Dictionary<String, List<String>>();
@@ -27,7 +27,10 @@ public class Synonyms {
             Environment.Exit(1);
         }
 
-        _synonyms = loadSynonyms(SynonymsFile[lang], synonymCount);
+        String variableName = "SYNONYMS_DIR";
+        String synonymsDir = Environment.GetEnvironmentVariable(variableName) ?? "SynonymsFiles";
+        String synonymsFile = Path.Combine(synonymsDir, SynonymsFile[lang]);
+        _synonyms = loadSynonyms(synonymsFile, synonymCount);
     }
 
     public Synonyms() {
