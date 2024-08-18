@@ -11,11 +11,7 @@ internal class Program {
         const String configName = "config.toml";
         
         String cwd = Environment.CurrentDirectory; // Where the program was called from
-
-        String basePath = AppDomain.CurrentDomain.BaseDirectory;
-        basePath = Path.Combine(basePath, "../../.."); // Go to directory where .cs files are located
-        Directory.SetCurrentDirectory(basePath);
-
+        
         String configLoc = createConfig(configName, projectName);
         
         IConfigReader reader = new TomlConfigReader();
@@ -65,7 +61,7 @@ internal class Program {
         String configLoc = Path.Combine(configs, projectName, configName);
 
         if (File.Exists(configLoc)) return configLoc;
-        Directory.CreateDirectory(Path.GetDirectoryName(configLoc));
+        Directory.CreateDirectory(Path.GetDirectoryName(configLoc) ?? ".");
         File.Copy(configName, configLoc);
         return configLoc;
     }
