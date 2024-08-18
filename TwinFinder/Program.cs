@@ -11,9 +11,7 @@ internal class Program {
         const String configName = "config.toml";
         
         String cwd = Environment.CurrentDirectory; // Where the program was called from
-        String basePath = AppDomain.CurrentDomain.BaseDirectory;
-        Directory.SetCurrentDirectory(basePath);
-
+        
         String configLoc = createConfig(configName, projectName);
         
         IConfigReader reader = new TomlConfigReader();
