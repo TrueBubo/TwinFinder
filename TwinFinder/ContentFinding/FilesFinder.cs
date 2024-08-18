@@ -14,7 +14,8 @@ public class FilesFinder : IContentFinder {
         
         List<string> files = new List<string>();
         foreach (String pattern in patterns) {
-               files.AddRange(Directory.GetFiles(_currentPath, pattern));
+            if (File.Exists(pattern)) files.Add(pattern);
+            else files.AddRange(Directory.GetFiles(_currentPath, pattern));
         }
         String[] result = files.Where(file => File.Exists(file)).ToArray();
 
