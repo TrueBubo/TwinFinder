@@ -9,19 +9,27 @@ internal class Program {
     static void Main(string[] args) {
         const String projectName = "TwinFinder";
         const String configName = "config.toml";
+		const String synonymsName = "SynonymsFiles";
+
+        String variableName = "TWINFINDER_SHARED";
+		String? shared = Environment.GetEnvironmentVariable(variableName);
         
         String cwd = Environment.CurrentDirectory; // Where the program was called from
         
-        String configLoc = createConfig(configName, projectName);
+        String configLoc = createConfig(shared != null ? $"{shared}/{configName}" : configName, projectName);
         
         IConfigReader reader = new TomlConfigReader();
         OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
         Options options = optionsParser.options;
+		options.shared = shared;
 
         IContentFinder contentFinder = new FilesFinder();
         String[] files = contentFinder.find(cwd, args);
 
-        ProcessContent processContent = new ProcessContent(options);
+		String synonymsLoc = moveSynonyms(synonymsName, projectName);
+		Synonyms synonyms = new Synonyms(options.language, options.synonymCount, options.shared);
+
+        ProcessContent processContent = new ProcessContent(options, synonyms);
         Thread[] threads = new Thread[files.Length];
 
         for (int idx = 0; idx < files.Length; idx++) {
@@ -65,6 +73,21 @@ internal class Program {
         File.Copy(configName, configLoc);
         return configLoc;
     }
+
+	private static String moveSynonyms(String synonymsName, String projectName) {
+        String configs = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+		String synonymsLoc = Path.Combine(configs, projectName, synonymsName);
+		
+		if (Directory.Exists(synonymsLoc)) return synonymsLoc;
+		Directory.CreateDirectory(synonymsLoc);
+		String[] files = Directory.GetFiles(synonymsName);
+		foreach (String file in files) {
+			Console.Write(file);
+			File.Copy(Path.Combine(synonymsName, Path.GetFileName(file)), 
+					Path.Combine(synonymsLoc, Path.GetFileName(file)));
+		}
+		return synonymsLoc;
+	}
 
     private static String formatSimilar(HeapEntry<String[]> entry, Options options, int decimalPrecision, string cwd) {
         // Key refers to the paths of files compared, priority is their similarity

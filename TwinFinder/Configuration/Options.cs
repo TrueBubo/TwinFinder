@@ -117,4 +117,6 @@ public class Options {
         get => _outputFile;
         set => _outputFile = value;
     }
+
+    public String? shared = null;
 }
