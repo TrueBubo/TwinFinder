@@ -19,15 +19,14 @@ public class Synonyms {
     
     private Dictionary<String, List<String>> _synonyms = new Dictionary<String, List<String>>();
 
-    public Synonyms(Options.Language lang, int synonymCount, String? shared) {
+    public Synonyms(Options.Language lang, int synonymCount, String synonymsLoc) {
         if (!SynonymsFile.ContainsKey(lang)) {
             Console.Error.WriteLine($"Language file for {Options.langToCode[lang]} was not found, available languages are:");
             foreach (Options.Language availableLang in SynonymsFile.Keys) Console.Error.WriteLine($"\t{Options.langToCode[availableLang]}");
             Environment.Exit(1);
         }
 
-		String synonymsDir = shared != null ? Path.Combine(shared, "SynonymsFiles") : "SynonymsFiles"; 
-		String synonymsFile = Path.Combine(synonymsDir, SynonymsFile[lang]); 
+		String synonymsFile = Path.Combine(synonymsLoc, SynonymsFile[lang]); 
 		_synonyms = loadSynonyms(synonymsFile, synonymCount); 
 	}
 

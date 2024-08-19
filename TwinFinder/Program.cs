@@ -27,7 +27,7 @@ internal class Program {
         String[] files = contentFinder.find(cwd, args);
 
 		String synonymsLoc = moveSynonyms(synonymsName, projectName);
-		Synonyms synonyms = new Synonyms(options.language, options.synonymCount, options.shared);
+		Synonyms synonyms = new Synonyms(options.language, options.synonymCount, synonymsLoc);
 
         ProcessContent processContent = new ProcessContent(options, synonyms);
         Thread[] threads = new Thread[files.Length];
@@ -98,6 +98,6 @@ internal class Program {
             ? Path.GetFullPath(entry.Key[1])
             : Path.GetRelativePath(cwd, entry.Key[1]);
         double similarity = Math.Round(entry.Priority, decimalPrecision); // To not display really long double
-        return entry.Priority != 0 ? ($"{path1} {path2} {similarity}") : "";
+        return $"{path1} {path2} {similarity}";
     }
 }
