@@ -9,8 +9,7 @@ namespace TwinFinder.ContentAnalysis;
 public class Synonyms {
     /** Data class for storing words with their synonyms */
     private class Word {
-        public string word { get; set; } = "";
-        public List<string> synonyms { get; set; } = new List<string>();
+        public string word { get; set; } = ""; public List<string> synonyms { get; set; } = new List<string>();
     }
 
     /** Files with synonyms for given languages */
@@ -20,18 +19,17 @@ public class Synonyms {
     
     private Dictionary<String, List<String>> _synonyms = new Dictionary<String, List<String>>();
 
-    public Synonyms(Options.Language lang, int synonymCount) {
+    public Synonyms(Options.Language lang, int synonymCount, String? shared) {
         if (!SynonymsFile.ContainsKey(lang)) {
             Console.Error.WriteLine($"Language file for {Options.langToCode[lang]} was not found, available languages are:");
             foreach (Options.Language availableLang in SynonymsFile.Keys) Console.Error.WriteLine($"\t{Options.langToCode[availableLang]}");
             Environment.Exit(1);
         }
 
-        String variableName = "SYNONYMS_DIR";
-        String synonymsDir = Environment.GetEnvironmentVariable(variableName) ?? "SynonymsFiles";
-        String synonymsFile = Path.Combine(synonymsDir, SynonymsFile[lang]);
-        _synonyms = loadSynonyms(synonymsFile, synonymCount);
-    }
+		String synonymsDir = shared != null ? Path.Combine(shared, "SynonymsFiles") : "SynonymsFiles"; 
+		String synonymsFile = Path.Combine(synonymsDir, SynonymsFile[lang]); 
+		_synonyms = loadSynonyms(synonymsFile, synonymCount); 
+	}
 
     public Synonyms() {
     }

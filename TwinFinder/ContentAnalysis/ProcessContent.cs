@@ -25,12 +25,12 @@ public class ProcessContent {
 
     /** Unique words across all the contents */
     private ConcurrentBag<String> _uniqueWords = new ConcurrentBag<String>();
-    private Synonyms _synonyms = new Synonyms();
+    private Synonyms _synonyms;
 
-    public ProcessContent(Options options) {
+    public ProcessContent(Options options, Synonyms synonyms) {
+        _synonyms = synonyms;
         switch (options.mode) {
             case Options.Mode.Closest:
-                _synonyms = new Synonyms(options.language, options.synonymCount);
                 break;
             default:
                 Console.Error.WriteLine($"Mode {options.mode} does not exist");
