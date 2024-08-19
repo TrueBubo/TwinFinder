@@ -36,13 +36,12 @@ public class Closest<TK> where TK : notnull {
         }
 
         /** Adds element.
-         * priority will be stored as negative to convert min heap to max heap
          * @param element Key in heap
          * @param priority How important the element is
          */
         public void enqueue(TL element, double priority) {
             _priorities.Add(element, priority);
-            _heap.Enqueue(element, -priority);
+            _heap.Enqueue(element, priority);
             while (_heap.Count > _capacity) {
                 dequeue();
             }
@@ -56,7 +55,7 @@ public class Closest<TK> where TK : notnull {
             TL element = _heap.Dequeue();
             double priority = _priorities[element];
             _priorities.Remove(element);
-            return new HeapEntry<TL>(element, -priority);
+            return new HeapEntry<TL>(element, priority);
         }
     }
 
@@ -86,7 +85,7 @@ public class Closest<TK> where TK : notnull {
                 for (int j = i + 1; j <= to; j++) {
                     kClosest.enqueue(
                         [_indexes[i], _indexes[j]],
-                        -cosineSimilarity(_vectors[_indexes[i]], _vectors[_indexes[j]]));
+                        cosineSimilarity(_vectors[_indexes[i]], _vectors[_indexes[j]]));
                 }
             }
 
@@ -156,6 +155,7 @@ public class Closest<TK> where TK : notnull {
             magV2 += elem2 * elem2;
         }
 
-        return dotProduct / double.Sqrt(magV1 * magV2);
+        double similarity = dotProduct / double.Sqrt(magV1 * magV2);
+        return similarity;
     }
 }

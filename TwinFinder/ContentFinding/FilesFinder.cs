@@ -14,11 +14,10 @@ public class FilesFinder : IContentFinder {
         
         List<string> files = new List<string>();
         foreach (String pattern in patterns) {
-            if (File.Exists(pattern)) files.Add(pattern);
+            if (Path.IsPathRooted(pattern)) files.Add(pattern);
             else files.AddRange(Directory.GetFiles(_currentPath, pattern));
         }
         String[] result = files.Where(file => File.Exists(file)).ToArray();
-
         return result;
     }
 }
