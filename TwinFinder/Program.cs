@@ -9,7 +9,6 @@ internal class Program {
     static void Main(string[] args) {
         String variableName = $"{Project.Name.ToUpper()}_SHARED";
         String? shared = Environment.GetEnvironmentVariable(variableName);
-
         String cwd = Environment.CurrentDirectory; // Where the program was called from
 
         String configLoc = createConfig(shared != null ? $"{shared}/{Project.Config}" : Project.Config, Project.Name);
@@ -25,17 +24,21 @@ internal class Program {
         String synonymsLoc = moveSynonyms(Project.Synonyms, Project.Name);
         Synonyms synonyms = new Synonyms(options.language, options.synonymCount, synonymsLoc);
 
+
         ProcessContent processContent = new ProcessContent(options, synonyms);
         Thread[] threads = new Thread[files.Length];
 
         for (int idx = 0; idx < files.Length; idx++) {
             int localIdx = idx;
             threads[localIdx] = new Thread(
-                () => {
-                    try {
+                () =>
+                {
+                    try
+                    {
                         processContent.processContent(files[localIdx], new FileWordsParser(), options);
                     }
-                    catch (Exception e) {
+                    catch (Exception e)
+                    {
                         Console.Error.WriteLine($"{files[localIdx]} could not be processed");
                         Console.Error.WriteLine(e);
                     }
@@ -77,6 +80,7 @@ internal class Program {
         if (Directory.Exists(synonymsLoc)) return synonymsLoc;
         Directory.CreateDirectory(synonymsLoc);
         String[] files = Directory.GetFiles(synonymsName);
+
         foreach (String file in files) {
             File.Copy(Path.Combine(synonymsName, Path.GetFileName(file)),
                 Path.Combine(synonymsLoc, Path.GetFileName(file)));
