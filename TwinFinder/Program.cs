@@ -7,14 +7,12 @@ namespace TwinFinder;
 
 internal class Program {
     static void Main(string[] args) {
-        
         String variableName = $"{Project.Name.ToUpper()}_SHARED";
-    		String? shared = Environment.GetEnvironmentVariable(variableName);
-        
+        String? shared = Environment.GetEnvironmentVariable(variableName);
         String cwd = Environment.CurrentDirectory; // Where the program was called from
-        
+
         String configLoc = createConfig(shared != null ? $"{shared}/{Project.Config}" : Project.Config, Project.Name);
-        
+
         IConfigReader reader = new TomlConfigReader();
         OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
         Options options = optionsParser.options;
@@ -23,8 +21,9 @@ internal class Program {
         IContentFinder contentFinder = new FilesFinder();
         String[] files = contentFinder.find(cwd, args);
 
-		    String synonymsLoc = moveSynonyms(Project.Synonyms, Project.Name);
-		    Synonyms synonyms = new Synonyms(options.language, options.synonymCount, synonymsLoc);
+        String synonymsLoc = moveSynonyms(Project.Synonyms, Project.Name);
+        Synonyms synonyms = new Synonyms(options.language, options.synonymCount, synonymsLoc);
+
 
         ProcessContent processContent = new ProcessContent(options, synonyms);
         Thread[] threads = new Thread[files.Length];
@@ -81,11 +80,12 @@ internal class Program {
         if (Directory.Exists(synonymsLoc)) return synonymsLoc;
         Directory.CreateDirectory(synonymsLoc);
         String[] files = Directory.GetFiles(synonymsName);
-        foreach (String file in files)
-        {
+
+        foreach (String file in files) {
             File.Copy(Path.Combine(synonymsName, Path.GetFileName(file)),
-                    Path.Combine(synonymsLoc, Path.GetFileName(file)));
+                Path.Combine(synonymsLoc, Path.GetFileName(file)));
         }
+
         return synonymsLoc;
     }
 
