@@ -7,13 +7,12 @@ namespace TwinFinder;
 
 internal class Program {
     static void Main(string[] args) {
-        String sharedEnvVariablegag = $"{Project.Name.ToUpper()}_SHARED";
-        String? shared = Environment.GetEnvironmentVariable(sharedEnvVariablegag);
+        String? shared = Environment.GetEnvironmentVariable(Project.SharedEnvVariableName);
         String cwd = Environment.CurrentDirectory; // Where the program was called from
-
         String configLoc = createConfig(shared != null ? Path.Combine(shared, Project.Config) : Project.Config, Project.Name);
 
         IConfigReader reader = new TomlConfigReader();
+        
         OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
         Options options = optionsParser.options;
         options.shared = shared;
@@ -21,7 +20,7 @@ internal class Program {
         IContentFinder contentFinder = new FilesFinder();
         String[] files = contentFinder.find(cwd, args);
 
-        String synonymsLoc = moveSynonyms(Project.Synonyms, Project.Name);
+        String synonymsLoc = moveSynonyms(shared != null ? Path.Combine(shared, Project.Synonyms) : Project.Synonyms, Project.Name);
         Synonyms synonyms = new Synonyms(options.language, options.synonymCount, synonymsLoc);
 
 
@@ -64,9 +63,9 @@ internal class Program {
         String configs = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         String configLoc = Path.Combine(configs, projectName, configName);
 
-        if (File.Exists(configLoc)) return configLoc;
-        Directory.CreateDirectory(Path.GetDirectoryName(configLoc) ?? ".");
-        File.Copy(configName, configLoc);
+        String configDir = Path.GetDirectoryName(configLoc) ?? ".";
+        if (!Directory.Exists(configDir)) Directory.CreateDirectory(configDir);
+        if (!File.Exists(configLoc)) File.Copy(configName, configLoc);
         return configLoc;
     }
 
@@ -74,13 +73,13 @@ internal class Program {
         String configs = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         String synonymsLoc = Path.Combine(configs, projectName, synonymsName);
 
-        if (Directory.Exists(synonymsLoc)) return synonymsLoc;
-        Directory.CreateDirectory(synonymsLoc);
+        if (!Directory.Exists(synonymsLoc)) Directory.CreateDirectory(synonymsLoc);
+        
         String[] files = Directory.GetFiles(synonymsName);
-
         foreach (String file in files) {
-            File.Copy(Path.Combine(synonymsName, Path.GetFileName(file)),
-                Path.Combine(synonymsLoc, Path.GetFileName(file)));
+            String src = Path.Combine(synonymsName, Path.GetFileName(file));
+            String dest = Path.Combine(synonymsLoc, Path.GetFileName(file));
+            if (!File.Exists(dest)) File.Copy(src, dest);
         }
 
         return synonymsLoc;
