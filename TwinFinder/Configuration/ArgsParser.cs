@@ -14,6 +14,7 @@ public class ArgsParser {
      */
     private Dictionary<String, String> _validOptions =
         new Dictionary<String, String>() {
+            { "-h", "help"},
             { "-m", "mode" },
             { "--normalize", "normalizeWords" },
             { "-n", "pairsToFind" },

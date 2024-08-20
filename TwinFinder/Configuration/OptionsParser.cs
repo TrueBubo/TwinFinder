@@ -24,6 +24,7 @@ public class OptionsParser {
     /** Functions used for parsing selected options */
     private static readonly Dictionary<string, Action<Hashtable, string, Options>> OptionSettingFunctions =
         new() {
+            { "help", showHelp},
             { "mode", parseMode },
             { "normalizeWords", parseNormalize },
             { "pairsToFind", parsePairsToFind },
@@ -82,6 +83,25 @@ public class OptionsParser {
         foreach (String key in configOptions.Keys) {
             Console.Error.WriteLine($"Unknown option {key}");
         }
+    }
+    
+    private static void showHelp(Hashtable arg1, string arg2, Options arg3) {
+        String text =
+            $"""
+            {Project.Name} {Project.Version}
+            Released under {Project.License}    
+            
+            -h          To display this help menu
+            -m          What technique will be used to determine similar files 
+            --normalize Removes accents and diacritics
+            -n          Pairs to find
+            -s          Number of synonyms to consider
+            --lang      Language the texts are in
+            --absolute  Prints text locations using absolute paths instead of relative
+            -o          Where should the outputs of the program be sent
+            """;
+            Console.WriteLine(text);
+            Environment.Exit(0);
     }
 
     private static void parseMode(Hashtable table, String nameInTable, Options options) {

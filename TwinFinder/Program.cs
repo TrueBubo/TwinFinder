@@ -7,16 +7,13 @@ namespace TwinFinder;
 
 internal class Program {
     static void Main(string[] args) {
-        const String projectName = "TwinFinder";
-        const String configName = "config.toml";
-		const String synonymsName = "SynonymsFiles";
-
-        String variableName = "TWINFINDER_SHARED";
+        
+        String variableName = $"{Project.Name.ToUpper()}_SHARED";
 		String? shared = Environment.GetEnvironmentVariable(variableName);
         
         String cwd = Environment.CurrentDirectory; // Where the program was called from
         
-        String configLoc = createConfig(shared != null ? $"{shared}/{configName}" : configName, projectName);
+        String configLoc = createConfig(shared != null ? $"{shared}/{Project.Config}" : Project.Config, Project.Name);
         
         IConfigReader reader = new TomlConfigReader();
         OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
@@ -26,7 +23,7 @@ internal class Program {
         IContentFinder contentFinder = new FilesFinder();
         String[] files = contentFinder.find(cwd, args);
 
-		String synonymsLoc = moveSynonyms(synonymsName, projectName);
+		String synonymsLoc = moveSynonyms(Project.Synonyms, Project.Name);
 		Synonyms synonyms = new Synonyms(options.language, options.synonymCount, synonymsLoc);
 
         ProcessContent processContent = new ProcessContent(options, synonyms);

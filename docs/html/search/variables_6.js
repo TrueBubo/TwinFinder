@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pairstofind_0',['PairsToFind',['../classTwinFinder_1_1Configuration_1_1Defaults.html#ae39aadf93558d47ebd24991a61b028cc',1,'TwinFinder::Configuration::Defaults']]],
-  ['priority_1',['Priority',['../classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html#a580fd7dc9c209daa7096345ffadff418',1,'TwinFinder::ContentAnalysis::HeapEntry']]]
+  ['optionsettingfunctions_0',['OptionSettingFunctions',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a87b93976308345596570a3571018e5ac',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['outputfile_1',['OutputFile',['../classTwinFinder_1_1Configuration_1_1Defaults.html#a6cc897d413bf0e47c9e17ac198f3de0a',1,'TwinFinder::Configuration::Defaults']]]
 ];

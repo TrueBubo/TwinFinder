@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizewords_0',['NormalizeWords',['../classTwinFinder_1_1Configuration_1_1Defaults.html#a3776fb9e363e13d46b198c5d793e6398',1,'TwinFinder::Configuration::Defaults']]]
+  ['mode_0',['Mode',['../classTwinFinder_1_1Configuration_1_1Defaults.html#a81a97a7166d4e419f19af934366c1e91',1,'TwinFinder::Configuration::Defaults']]]
 ];

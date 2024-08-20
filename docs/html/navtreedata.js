@@ -49,7 +49,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ArgsParser_8cs.html",
-"functions_vars.html"
+"classTwinFinder_1_1ContentIO_1_1ConsoleOutput.html#a48e26f0a81be8950da46fbbf27d01c68"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

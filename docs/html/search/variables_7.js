@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['synonymcount_0',['SynonymCount',['../classTwinFinder_1_1Configuration_1_1Defaults.html#a9ccf14b1956ee6076ef215b4447f73e4',1,'TwinFinder::Configuration::Defaults']]],
-  ['synonymsfile_1',['SynonymsFile',['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#a18bf079dde49dad984fbb3ac179b2c87',1,'TwinFinder::ContentAnalysis::Synonyms']]]
+  ['pairstofind_0',['PairsToFind',['../classTwinFinder_1_1Configuration_1_1Defaults.html#ae39aadf93558d47ebd24991a61b028cc',1,'TwinFinder::Configuration::Defaults']]],
+  ['priority_1',['Priority',['../classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html#a580fd7dc9c209daa7096345ffadff418',1,'TwinFinder::ContentAnalysis::HeapEntry']]]
 ];
