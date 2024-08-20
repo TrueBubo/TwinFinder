@@ -7,11 +7,11 @@ namespace TwinFinder;
 
 internal class Program {
     static void Main(string[] args) {
-        String variableName = $"{Project.Name.ToUpper()}_SHARED";
-        String? shared = Environment.GetEnvironmentVariable(variableName);
+        String sharedEnvVariablegag = $"{Project.Name.ToUpper()}_SHARED";
+        String? shared = Environment.GetEnvironmentVariable(sharedEnvVariablegag);
         String cwd = Environment.CurrentDirectory; // Where the program was called from
 
-        String configLoc = createConfig(shared != null ? $"{shared}/{Project.Config}" : Project.Config, Project.Name);
+        String configLoc = createConfig(shared != null ? Path.Combine(shared, Project.Config) : Project.Config, Project.Name);
 
         IConfigReader reader = new TomlConfigReader();
         OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
@@ -31,14 +31,11 @@ internal class Program {
         for (int idx = 0; idx < files.Length; idx++) {
             int localIdx = idx;
             threads[localIdx] = new Thread(
-                () =>
-                {
-                    try
-                    {
+                () => {
+                    try {
                         processContent.processContent(files[localIdx], new FileWordsParser(), options);
                     }
-                    catch (Exception e)
-                    {
+                    catch (Exception e) {
                         Console.Error.WriteLine($"{files[localIdx]} could not be processed");
                         Console.Error.WriteLine(e);
                     }
