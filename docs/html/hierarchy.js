@@ -11,6 +11,10 @@ var hierarchy =
     [ "TwinFinder.ContentFinding.IContentFinder", "interfaceTwinFinder_1_1ContentFinding_1_1IContentFinder.html", [
       [ "TwinFinder.ContentFinding.FilesFinder", "classTwinFinder_1_1ContentFinding_1_1FilesFinder.html", null ]
     ] ],
+    [ "TwinFinder.ContentIO.IOutput", "interfaceTwinFinder_1_1ContentIO_1_1IOutput.html", [
+      [ "TwinFinder.ContentIO.ConsoleOutput", "classTwinFinder_1_1ContentIO_1_1ConsoleOutput.html", null ],
+      [ "TwinFinder.ContentIO.FileOutput", "classTwinFinder_1_1ContentIO_1_1FileOutput.html", null ]
+    ] ],
     [ "TwinFinder.ContentIO.IWordsParser", "interfaceTwinFinder_1_1ContentIO_1_1IWordsParser.html", [
       [ "TwinFinder.ContentIO.FileWordsParser", "classTwinFinder_1_1ContentIO_1_1FileWordsParser.html", null ]
     ] ],
@@ -18,6 +22,7 @@ var hierarchy =
     [ "TwinFinder.Configuration.Options", "classTwinFinder_1_1Configuration_1_1Options.html", null ],
     [ "TwinFinder.Configuration.OptionsParser", "classTwinFinder_1_1Configuration_1_1OptionsParser.html", null ],
     [ "TwinFinder.ContentAnalysis.ProcessContent", "classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html", null ],
+    [ "TwinFinder.Project", "classTwinFinder_1_1Project.html", null ],
     [ "TwinFinder.ContentIO.StringModifications", "classTwinFinder_1_1ContentIO_1_1StringModifications.html", null ],
     [ "TwinFinder.ContentAnalysis.Synonyms", "classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html", null ],
     [ "TwinFinder.ContentAnalysis.TextStats", "classTwinFinder_1_1ContentAnalysis_1_1TextStats.html", null ],

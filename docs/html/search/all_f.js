@@ -8,11 +8,14 @@ var searchData=
   ['parselanguage_5',['parseLanguage',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#ad776da1287b58d9ca5e69fc14dd051ec',1,'TwinFinder::Configuration::OptionsParser']]],
   ['parsemode_6',['parseMode',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a9254ddca567b6bf39653af8bc8ade4eb',1,'TwinFinder::Configuration::OptionsParser']]],
   ['parsenormalize_7',['parseNormalize',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a560201e5dac2113ebf8a41b5027a364f',1,'TwinFinder::Configuration::OptionsParser']]],
-  ['parsepairstofind_8',['parsePairsToFind',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#abe293f7472d43ff886ea279d828b9e5e',1,'TwinFinder::Configuration::OptionsParser']]],
-  ['parsesynonymcount_9',['parseSynonymCount',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a5243121c1a51ebb9b40056c3d17cfcc7',1,'TwinFinder::Configuration::OptionsParser']]],
-  ['priority_10',['Priority',['../classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html#a580fd7dc9c209daa7096345ffadff418',1,'TwinFinder::ContentAnalysis::HeapEntry']]],
-  ['processcontent_11',['ProcessContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html',1,'TwinFinder.ContentAnalysis.ProcessContent'],['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab418c56cc091c8db1f2d36785bb316da',1,'TwinFinder.ContentAnalysis.ProcessContent.ProcessContent(Options options)']]],
-  ['processcontent_12',['processContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab771890ebc2015b4d06229a8095db9e8',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
-  ['processcontent_2ecs_13',['ProcessContent.cs',['../ProcessContent_8cs.html',1,'']]],
-  ['program_2ecs_14',['Program.cs',['../Program_8cs.html',1,'']]]
+  ['parseoutputfile_8',['parseOutputFile',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#af73e4bab27fcd97dfbf7e24923d5e412',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['parsepairstofind_9',['parsePairsToFind',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#abe293f7472d43ff886ea279d828b9e5e',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['parsesynonymcount_10',['parseSynonymCount',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a5243121c1a51ebb9b40056c3d17cfcc7',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['priority_11',['Priority',['../classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html#a580fd7dc9c209daa7096345ffadff418',1,'TwinFinder::ContentAnalysis::HeapEntry']]],
+  ['processcontent_12',['ProcessContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html',1,'TwinFinder.ContentAnalysis.ProcessContent'],['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a87b5a0f24687a1f8e3646f995f547fa3',1,'TwinFinder.ContentAnalysis.ProcessContent.ProcessContent(Options options, Synonyms synonyms)']]],
+  ['processcontent_13',['processContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab771890ebc2015b4d06229a8095db9e8',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['processcontent_2ecs_14',['ProcessContent.cs',['../ProcessContent_8cs.html',1,'']]],
+  ['program_2ecs_15',['Program.cs',['../Program_8cs.html',1,'']]],
+  ['project_16',['Project',['../classTwinFinder_1_1Project.html',1,'TwinFinder']]],
+  ['project_2ecs_17',['Project.cs',['../Project_8cs.html',1,'']]]
 ];

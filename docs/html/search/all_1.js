@@ -14,12 +14,14 @@ var searchData=
   ['_5fmodes_11',['_modes',['../classTwinFinder_1_1Configuration_1_1Options.html#a639f753b282f7fc553fcd4c5c18cddfe',1,'TwinFinder::Configuration::Options']]],
   ['_5fnormalizewords_12',['_normalizeWords',['../classTwinFinder_1_1Configuration_1_1Options.html#aa730a0e486c805b6fa809e7d6061dd65',1,'TwinFinder::Configuration::Options']]],
   ['_5foptions_13',['_options',['../classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html#ab024e126e620f271d93d358d989fe114',1,'TwinFinder.Configuration.ArgsParser.Args._options'],['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#ad671f9fea0804bd7412fbd77dd394038',1,'TwinFinder.Configuration.OptionsParser._options'],['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a0e25f892aca1f7c8c48fb5ab89ec50c7',1,'TwinFinder.ContentAnalysis.Closest._options']]],
-  ['_5fpairstofind_14',['_pairsToFind',['../classTwinFinder_1_1Configuration_1_1Options.html#a055fe33776ca28432b7f35172eed0e93',1,'TwinFinder::Configuration::Options']]],
-  ['_5fpriorities_15',['_priorities',['../classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#a2a5d3db0e26a5a7e7ba5ddb0dab3c409',1,'TwinFinder::ContentAnalysis::Closest::KHighest']]],
-  ['_5fsynonymcount_16',['_synonymCount',['../classTwinFinder_1_1Configuration_1_1Options.html#a44b530be2f78b19f0fd85feaa127c3c2',1,'TwinFinder::Configuration::Options']]],
-  ['_5fsynonyms_17',['_synonyms',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#af96f51976ced3985a059a826a28fa554',1,'TwinFinder.ContentAnalysis.ProcessContent._synonyms'],['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#a9449107401a3f17480b99cd8d67c405b',1,'TwinFinder.ContentAnalysis.Synonyms._synonyms']]],
-  ['_5funiquewords_18',['_uniqueWords',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a9f657469d4d8776b2c7310461a851e1c',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
-  ['_5fuseabsolutepaths_19',['_useAbsolutePaths',['../classTwinFinder_1_1Configuration_1_1Options.html#a496aabe0e8ee81c553bb3fb5ac1081e2',1,'TwinFinder::Configuration::Options']]],
-  ['_5fvalidoptions_20',['_validOptions',['../classTwinFinder_1_1Configuration_1_1ArgsParser.html#a50fe408b59ccadb79eca8c519e94ef34',1,'TwinFinder::Configuration::ArgsParser']]],
-  ['_5fvectors_21',['_vectors',['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a5024f7d229dcd52e007cbd29db0582c6',1,'TwinFinder::ContentAnalysis::Closest']]]
+  ['_5foutputfile_14',['_outputFile',['../classTwinFinder_1_1Configuration_1_1Options.html#a22b779bbdc203d512b9e6623e6f36334',1,'TwinFinder::Configuration::Options']]],
+  ['_5fpairstofind_15',['_pairsToFind',['../classTwinFinder_1_1Configuration_1_1Options.html#a055fe33776ca28432b7f35172eed0e93',1,'TwinFinder::Configuration::Options']]],
+  ['_5fpriorities_16',['_priorities',['../classTwinFinder_1_1ContentAnalysis_1_1Closest_1_1KHighest.html#a2a5d3db0e26a5a7e7ba5ddb0dab3c409',1,'TwinFinder::ContentAnalysis::Closest::KHighest']]],
+  ['_5fsynonymcount_17',['_synonymCount',['../classTwinFinder_1_1Configuration_1_1Options.html#a44b530be2f78b19f0fd85feaa127c3c2',1,'TwinFinder::Configuration::Options']]],
+  ['_5fsynonyms_18',['_synonyms',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#af96f51976ced3985a059a826a28fa554',1,'TwinFinder.ContentAnalysis.ProcessContent._synonyms'],['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#a9449107401a3f17480b99cd8d67c405b',1,'TwinFinder.ContentAnalysis.Synonyms._synonyms']]],
+  ['_5funiquewords_19',['_uniqueWords',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a9f657469d4d8776b2c7310461a851e1c',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['_5fuseabsolutepaths_20',['_useAbsolutePaths',['../classTwinFinder_1_1Configuration_1_1Options.html#a496aabe0e8ee81c553bb3fb5ac1081e2',1,'TwinFinder::Configuration::Options']]],
+  ['_5fvalidoptions_21',['_validOptions',['../classTwinFinder_1_1Configuration_1_1ArgsParser.html#a50fe408b59ccadb79eca8c519e94ef34',1,'TwinFinder::Configuration::ArgsParser']]],
+  ['_5fvectors_22',['_vectors',['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a5024f7d229dcd52e007cbd29db0582c6',1,'TwinFinder::ContentAnalysis::Closest']]],
+  ['_5fwriter_23',['_writer',['../classTwinFinder_1_1ContentIO_1_1FileOutput.html#a5592820eb3e58cb8e03820bf5a18f7b7',1,'TwinFinder::ContentIO::FileOutput']]]
 ];
