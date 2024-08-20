@@ -31,14 +31,11 @@ internal class Program {
         for (int idx = 0; idx < files.Length; idx++) {
             int localIdx = idx;
             threads[localIdx] = new Thread(
-                () =>
-                {
-                    try
-                    {
+                () => {
+                    try {
                         processContent.processContent(files[localIdx], new FileWordsParser(), options);
                     }
-                    catch (Exception e)
-                    {
+                    catch (Exception e) {
                         Console.Error.WriteLine($"{files[localIdx]} could not be processed");
                         Console.Error.WriteLine(e);
                     }
