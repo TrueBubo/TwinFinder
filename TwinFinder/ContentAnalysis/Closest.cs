@@ -4,7 +4,7 @@ using TwinFinder.Configuration;
 namespace TwinFinder.ContentAnalysis;
 
 /** Finds most similar contents based on how close they are lexicographically.
- * @tparam TK Datatype of words
+ * @param TK Datatype of words
  */
 public class Closest<TK> where TK : notnull {
     /** Frequencies of words in content.
@@ -16,7 +16,7 @@ public class Closest<TK> where TK : notnull {
     private readonly Options _options;
 
     /** Datastructure for holding K largest values.
-     * @tparam TL key in heap
+     * @param TL key in heap
      */
     public class KHighest<TL> where TL : notnull {
         private PriorityQueue<TL, double> _heap = new PriorityQueue<TL, double>();
@@ -138,7 +138,7 @@ public class Closest<TK> where TK : notnull {
      * @param v2 Second vector
      * @return cosine of the angle between them
      */
-    static double cosineSimilarity(Dictionary<TK, int> v1, Dictionary<TK, int> v2) {
+    public static double cosineSimilarity(Dictionary<TK, int> v1, Dictionary<TK, int> v2) {
         HashSet<TK> keys = new HashSet<TK>(v1.Keys);
         keys.UnionWith(v2.Keys);
         long dotProduct = 0;
