@@ -48,20 +48,7 @@ public class ProcessContent {
 
         switch (options.mode) {
             case Options.Mode.Closest: {
-                List<String> wordList = words.ToList();
-                foreach (String word in words) {
-                    foreach (String synonym in _synonyms.get(word)) {
-                        wordList.Add(synonym);
-                    }
-                }
-
-                Dictionary<String, int> frequenciesFile = TextStats.getFrequencies(wordList.ToArray());
-                _frequencies[loc] = frequenciesFile;
-                foreach (String word in frequenciesFile.Keys) {
-                    _uniqueWords.Add(word);
-                }
-
-
+                processClosest(loc, words);
                 break;
             }
             default: {
@@ -71,6 +58,21 @@ public class ProcessContent {
             }
         }
     }
+
+	public void processClosest(String loc, String[] words) {
+		List<String> wordList = words.ToList();
+        foreach (String word in words) {
+        	foreach (String synonym in _synonyms.get(word)) {
+            	wordList.Add(synonym);
+            }
+       }
+
+       Dictionary<String, int> frequenciesFile = TextStats.getFrequencies(wordList.ToArray());
+       _frequencies[loc] = frequenciesFile;
+       foreach (String word in frequenciesFile.Keys) {
+			_uniqueWords.Add(word);
+       }
+	}
     
     /** Gets similar contents based on options given
      * @return Most similar contents
