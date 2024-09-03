@@ -9,6 +9,7 @@ var searchData=
   ['parseoutputfile_6',['parseOutputFile',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#af73e4bab27fcd97dfbf7e24923d5e412',1,'TwinFinder::Configuration::OptionsParser']]],
   ['parsepairstofind_7',['parsePairsToFind',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#abe293f7472d43ff886ea279d828b9e5e',1,'TwinFinder::Configuration::OptionsParser']]],
   ['parsesynonymcount_8',['parseSynonymCount',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a5243121c1a51ebb9b40056c3d17cfcc7',1,'TwinFinder::Configuration::OptionsParser']]],
-  ['processcontent_9',['ProcessContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a87b5a0f24687a1f8e3646f995f547fa3',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
-  ['processcontent_10',['processContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab771890ebc2015b4d06229a8095db9e8',1,'TwinFinder::ContentAnalysis::ProcessContent']]]
+  ['processclosest_9',['processClosest',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a04d9fce08299ee3bef01900f7d023bf1',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['processcontent_10',['ProcessContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a87b5a0f24687a1f8e3646f995f547fa3',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['processcontent_11',['processContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab771890ebc2015b4d06229a8095db9e8',1,'TwinFinder::ContentAnalysis::ProcessContent']]]
 ];

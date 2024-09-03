@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "TwinFinder.Configuration.ArgsParser.ArgEntry", "classTwinFinder_1_1Configuration_1_1ArgsParser_1_1ArgEntry.html", null ],
     [ "TwinFinder.Configuration.ArgsParser.Args", "classTwinFinder_1_1Configuration_1_1ArgsParser_1_1Args.html", null ],
     [ "TwinFinder.Configuration.ArgsParser", "classTwinFinder_1_1Configuration_1_1ArgsParser.html", null ],
     [ "TwinFinder.ContentAnalysis.Closest< TK >", "classTwinFinder_1_1ContentAnalysis_1_1Closest.html", null ],

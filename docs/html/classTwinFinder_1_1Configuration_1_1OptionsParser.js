@@ -12,6 +12,7 @@ var classTwinFinder_1_1Configuration_1_1OptionsParser =
     [ "parseSynonymCount", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a5243121c1a51ebb9b40056c3d17cfcc7", null ],
     [ "setOption", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a5a3f80acd755ed415133f20fc5872259", null ],
     [ "setOptions", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a00aba76f6e32e8783f8c37dfc94ceff7", null ],
+    [ "showHelp", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#ade954c60454033b036a45a33490261ad", null ],
     [ "showHelp", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#a7d79855878794343665d8c7c661dd5d2", null ],
     [ "_contentLoc", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#ab65008bd8f7a5b1e1140c02be36afa13", null ],
     [ "_instance", "classTwinFinder_1_1Configuration_1_1OptionsParser.html#afa831315fc919465974bc736f972b2a5", null ],

@@ -21,7 +21,7 @@ var searchData=
   ['_5fsynonyms_18',['_synonyms',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#af96f51976ced3985a059a826a28fa554',1,'TwinFinder.ContentAnalysis.ProcessContent._synonyms'],['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#a9449107401a3f17480b99cd8d67c405b',1,'TwinFinder.ContentAnalysis.Synonyms._synonyms']]],
   ['_5funiquewords_19',['_uniqueWords',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a9f657469d4d8776b2c7310461a851e1c',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
   ['_5fuseabsolutepaths_20',['_useAbsolutePaths',['../classTwinFinder_1_1Configuration_1_1Options.html#a496aabe0e8ee81c553bb3fb5ac1081e2',1,'TwinFinder::Configuration::Options']]],
-  ['_5fvalidoptions_21',['_validOptions',['../classTwinFinder_1_1Configuration_1_1ArgsParser.html#a50fe408b59ccadb79eca8c519e94ef34',1,'TwinFinder::Configuration::ArgsParser']]],
+  ['_5fvalidoptions_21',['_validOptions',['../classTwinFinder_1_1Configuration_1_1ArgsParser.html#aa92c7e5d0085888f64321a74fdd58578',1,'TwinFinder::Configuration::ArgsParser']]],
   ['_5fvectors_22',['_vectors',['../classTwinFinder_1_1ContentAnalysis_1_1Closest.html#a5024f7d229dcd52e007cbd29db0582c6',1,'TwinFinder::ContentAnalysis::Closest']]],
   ['_5fwriter_23',['_writer',['../classTwinFinder_1_1ContentIO_1_1FileOutput.html#a5592820eb3e58cb8e03820bf5a18f7b7',1,'TwinFinder::ContentIO::FileOutput']]]
 ];

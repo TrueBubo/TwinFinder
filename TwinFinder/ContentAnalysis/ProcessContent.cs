@@ -59,6 +59,10 @@ public class ProcessContent {
         }
     }
 
+	/** Process individual contents when the mode is set to closest
+	 * @param loc Location of the content
+	 * @param words List of words parsed from the selected content
+	*/
 	private void processClosest(String loc, String[] words) {
 		List<String> wordList = words.ToList();
         foreach (String word in words) {
@@ -89,6 +93,9 @@ public class ProcessContent {
         }
     }
 
+	/** Gets similar contents based on the closest criteria
+	 * @return Most similar contents
+	*/
 	private HeapEntry<String[]>[] getTwinFilesClosest(Options options) {
         Closest<String> closest = new Closest<String>(_frequencies, options);
         var result = closest.getKClosest(options.pairsToFind, 0, _frequencies.Count - 1);

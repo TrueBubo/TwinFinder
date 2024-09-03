@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_0',['Key',['../classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html#a53509e90e0496e2dd29a32776b615b00',1,'TwinFinder::ContentAnalysis::HeapEntry']]]
+  ['expectsvalue_0',['expectsValue',['../classTwinFinder_1_1Configuration_1_1ArgsParser_1_1ArgEntry.html#ac43cf26be7cdccdab83d11b000d49411',1,'TwinFinder::Configuration::ArgsParser::ArgEntry']]]
 ];

@@ -12,10 +12,11 @@ var searchData=
   ['parsepairstofind_9',['parsePairsToFind',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#abe293f7472d43ff886ea279d828b9e5e',1,'TwinFinder::Configuration::OptionsParser']]],
   ['parsesynonymcount_10',['parseSynonymCount',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a5243121c1a51ebb9b40056c3d17cfcc7',1,'TwinFinder::Configuration::OptionsParser']]],
   ['priority_11',['Priority',['../classTwinFinder_1_1ContentAnalysis_1_1HeapEntry.html#a580fd7dc9c209daa7096345ffadff418',1,'TwinFinder::ContentAnalysis::HeapEntry']]],
-  ['processcontent_12',['ProcessContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html',1,'TwinFinder.ContentAnalysis.ProcessContent'],['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a87b5a0f24687a1f8e3646f995f547fa3',1,'TwinFinder.ContentAnalysis.ProcessContent.ProcessContent(Options options, Synonyms synonyms)']]],
-  ['processcontent_13',['processContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab771890ebc2015b4d06229a8095db9e8',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
-  ['processcontent_2ecs_14',['ProcessContent.cs',['../ProcessContent_8cs.html',1,'']]],
-  ['program_2ecs_15',['Program.cs',['../Program_8cs.html',1,'']]],
-  ['project_16',['Project',['../classTwinFinder_1_1Project.html',1,'TwinFinder']]],
-  ['project_2ecs_17',['Project.cs',['../Project_8cs.html',1,'']]]
+  ['processclosest_12',['processClosest',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a04d9fce08299ee3bef01900f7d023bf1',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['processcontent_13',['ProcessContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html',1,'TwinFinder.ContentAnalysis.ProcessContent'],['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#a87b5a0f24687a1f8e3646f995f547fa3',1,'TwinFinder.ContentAnalysis.ProcessContent.ProcessContent(Options options, Synonyms synonyms)']]],
+  ['processcontent_14',['processContent',['../classTwinFinder_1_1ContentAnalysis_1_1ProcessContent.html#ab771890ebc2015b4d06229a8095db9e8',1,'TwinFinder::ContentAnalysis::ProcessContent']]],
+  ['processcontent_2ecs_15',['ProcessContent.cs',['../ProcessContent_8cs.html',1,'']]],
+  ['program_2ecs_16',['Program.cs',['../Program_8cs.html',1,'']]],
+  ['project_17',['Project',['../classTwinFinder_1_1Project.html',1,'TwinFinder']]],
+  ['project_2ecs_18',['Project.cs',['../Project_8cs.html',1,'']]]
 ];
