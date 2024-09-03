@@ -8,20 +8,32 @@ namespace TwinFinder.Configuration;
  * Files are automatically parsed from patterns by the user's shell.
  */
 public class ArgsParser {
+    public class ArgEntry {
+        public String flag;
+        public String optionName;
+        public bool expectsValue;
+
+        public ArgEntry(String flag, String optionName, bool expectsValue) {
+            this.flag = flag;
+            this.optionName = optionName;
+            this.expectsValue = expectsValue;
+        }
+    }
+    
     /** (Flag, Name in OptionsParser).
      * - Key in dictionary corresponds to the flag to be used in the terminal.
      * - Value is the name in OptionsParser
      */
-    private Dictionary<String, String> _validOptions =
-        new Dictionary<String, String>() {
-            { "-h", "help"},
-            { "-m", "mode" },
-            { "--normalize", "normalizeWords" },
-            { "-n", "pairsToFind" },
-            { "-s", "synonymCount" },
-            { "--lang", "language" },
-            { "--absolute", "useAbsolutePaths" },
-            { "-o", "output"}
+    private Dictionary<String, ArgEntry> _validOptions =
+        new Dictionary<String, ArgEntry>() {
+            {"-h", new ArgEntry("-h", "help", false)},
+            {"m", new ArgEntry("-m", "mode", true)},
+            {"--normalize", new ArgEntry("--normalize", "normalizeWords", false)},
+            {"-n", new ArgEntry("-n", "pairsToFind", true)},
+            {"-s", new ArgEntry("-s", "synonymCount", true)},
+            {"--lang", new ArgEntry("--lang", "language", true)},
+            {"--absolute", new ArgEntry("--absolute", "useAbsolutePaths", false)},
+            {"-o", new ArgEntry("-o", "output", true)}
         };
 
     /** Dataclass holding parsed command line arguments
@@ -51,7 +63,9 @@ public class ArgsParser {
         for (; idx < args.Length; idx++) {
             if (args[idx][0] != '-') break;
             if (!_validOptions.ContainsKey(args[idx])) break;
-            options[_validOptions[args[idx]]] = (idx != args.Length - 1) ? args[++idx] : null;
+            ArgEntry argEntry = _validOptions[args[idx]];
+            options[argEntry.optionName] = (argEntry.expectsValue) ? 
+                ((idx != args.Length - 1) ? args[++idx] : null) : true;
         }
 
         String[] contentLocations = args[idx..];
