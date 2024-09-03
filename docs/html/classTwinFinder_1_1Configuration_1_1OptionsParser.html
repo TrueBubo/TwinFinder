@@ -19,6 +19,8 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -142,6 +144,8 @@ Private Member Functions</h2></td></tr>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a7d79855878794343665d8c7c661dd5d2" id="r_a7d79855878794343665d8c7c661dd5d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d79855878794343665d8c7c661dd5d2">showHelp</a> (Hashtable arg1, string arg2, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> arg3)</td></tr>
 <tr class="separator:a7d79855878794343665d8c7c661dd5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade954c60454033b036a45a33490261ad" id="r_ade954c60454033b036a45a33490261ad"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade954c60454033b036a45a33490261ad">showHelp</a> ()</td></tr>
+<tr class="separator:ade954c60454033b036a45a33490261ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9254ddca567b6bf39653af8bc8ade4eb" id="r_a9254ddca567b6bf39653af8bc8ade4eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9254ddca567b6bf39653af8bc8ade4eb">parseMode</a> (Hashtable table, String nameInTable, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> <a class="el" href="#ab032c5a9d48dbe466da960585db520f3">options</a>)</td></tr>
 <tr class="separator:a9254ddca567b6bf39653af8bc8ade4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a560201e5dac2113ebf8a41b5027a364f" id="r_a560201e5dac2113ebf8a41b5027a364f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a560201e5dac2113ebf8a41b5027a364f">parseNormalize</a> (Hashtable table, String nameInTable, <a class="el" href="classTwinFinder_1_1Configuration_1_1Options.html">Options</a> <a class="el" href="#ab032c5a9d48dbe466da960585db520f3">options</a>)</td></tr>
@@ -588,8 +592,33 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ade954c60454033b036a45a33490261ad" name="ade954c60454033b036a45a33490261ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade954c60454033b036a45a33490261ad">&#9670;&#160;</a></span>showHelp() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TwinFinder.Configuration.OptionsParser.showHelp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7d79855878794343665d8c7c661dd5d2" name="a7d79855878794343665d8c7c661dd5d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d79855878794343665d8c7c661dd5d2">&#9670;&#160;</a></span>showHelp()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d79855878794343665d8c7c661dd5d2">&#9670;&#160;</a></span>showHelp() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -736,7 +765,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <span class="keyword">new</span>() {</div>
-<div class="line">            { <span class="stringliteral">&quot;help&quot;</span>, <a class="code hl_function" href="#a7d79855878794343665d8c7c661dd5d2">showHelp</a>},</div>
+<div class="line">            { <span class="stringliteral">&quot;help&quot;</span>, <a class="code hl_function" href="#ade954c60454033b036a45a33490261ad">showHelp</a>},</div>
 <div class="line">            { <span class="stringliteral">&quot;mode&quot;</span>, <a class="code hl_function" href="#a9254ddca567b6bf39653af8bc8ade4eb">parseMode</a> },</div>
 <div class="line">            { <span class="stringliteral">&quot;normalizeWords&quot;</span>, <a class="code hl_function" href="#a560201e5dac2113ebf8a41b5027a364f">parseNormalize</a> },</div>
 <div class="line">            { <span class="stringliteral">&quot;pairsToFind&quot;</span>, <a class="code hl_function" href="#abe293f7472d43ff886ea279d828b9e5e">parsePairsToFind</a> },</div>
@@ -745,14 +774,14 @@ Static Private Attributes</h2></td></tr>
 <div class="line">            { <span class="stringliteral">&quot;useAbsolutePaths&quot;</span>, <a class="code hl_function" href="#a8b9df5b96c6fe3810a79872ff93db3bd">parseAbsolutePath</a> },</div>
 <div class="line">            { <span class="stringliteral">&quot;output&quot;</span>, <a class="code hl_function" href="#af73e4bab27fcd97dfbf7e24923d5e412">parseOutputFile</a>}</div>
 <div class="line">        }</div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a5243121c1a51ebb9b40056c3d17cfcc7"><div class="ttname"><a href="#a5243121c1a51ebb9b40056c3d17cfcc7">TwinFinder.Configuration.OptionsParser.parseSynonymCount</a></div><div class="ttdeci">static void parseSynonymCount(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:138</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a560201e5dac2113ebf8a41b5027a364f"><div class="ttname"><a href="#a560201e5dac2113ebf8a41b5027a364f">TwinFinder.Configuration.OptionsParser.parseNormalize</a></div><div class="ttdeci">static void parseNormalize(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:113</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a7d79855878794343665d8c7c661dd5d2"><div class="ttname"><a href="#a7d79855878794343665d8c7c661dd5d2">TwinFinder.Configuration.OptionsParser.showHelp</a></div><div class="ttdeci">static void showHelp(Hashtable arg1, string arg2, Options arg3)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:88</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a8b9df5b96c6fe3810a79872ff93db3bd"><div class="ttname"><a href="#a8b9df5b96c6fe3810a79872ff93db3bd">TwinFinder.Configuration.OptionsParser.parseAbsolutePath</a></div><div class="ttdeci">static void parseAbsolutePath(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:158</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a9254ddca567b6bf39653af8bc8ade4eb"><div class="ttname"><a href="#a9254ddca567b6bf39653af8bc8ade4eb">TwinFinder.Configuration.OptionsParser.parseMode</a></div><div class="ttdeci">static void parseMode(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:107</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_abe293f7472d43ff886ea279d828b9e5e"><div class="ttname"><a href="#abe293f7472d43ff886ea279d828b9e5e">TwinFinder.Configuration.OptionsParser.parsePairsToFind</a></div><div class="ttdeci">static void parsePairsToFind(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:125</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_ad776da1287b58d9ca5e69fc14dd051ec"><div class="ttname"><a href="#ad776da1287b58d9ca5e69fc14dd051ec">TwinFinder.Configuration.OptionsParser.parseLanguage</a></div><div class="ttdeci">static void parseLanguage(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:151</div></div>
-<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_af73e4bab27fcd97dfbf7e24923d5e412"><div class="ttname"><a href="#af73e4bab27fcd97dfbf7e24923d5e412">TwinFinder.Configuration.OptionsParser.parseOutputFile</a></div><div class="ttdeci">static void parseOutputFile(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:170</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a5243121c1a51ebb9b40056c3d17cfcc7"><div class="ttname"><a href="#a5243121c1a51ebb9b40056c3d17cfcc7">TwinFinder.Configuration.OptionsParser.parseSynonymCount</a></div><div class="ttdeci">static void parseSynonymCount(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:143</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a560201e5dac2113ebf8a41b5027a364f"><div class="ttname"><a href="#a560201e5dac2113ebf8a41b5027a364f">TwinFinder.Configuration.OptionsParser.parseNormalize</a></div><div class="ttdeci">static void parseNormalize(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:118</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a8b9df5b96c6fe3810a79872ff93db3bd"><div class="ttname"><a href="#a8b9df5b96c6fe3810a79872ff93db3bd">TwinFinder.Configuration.OptionsParser.parseAbsolutePath</a></div><div class="ttdeci">static void parseAbsolutePath(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:163</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_a9254ddca567b6bf39653af8bc8ade4eb"><div class="ttname"><a href="#a9254ddca567b6bf39653af8bc8ade4eb">TwinFinder.Configuration.OptionsParser.parseMode</a></div><div class="ttdeci">static void parseMode(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:112</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_abe293f7472d43ff886ea279d828b9e5e"><div class="ttname"><a href="#abe293f7472d43ff886ea279d828b9e5e">TwinFinder.Configuration.OptionsParser.parsePairsToFind</a></div><div class="ttdeci">static void parsePairsToFind(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:130</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_ad776da1287b58d9ca5e69fc14dd051ec"><div class="ttname"><a href="#ad776da1287b58d9ca5e69fc14dd051ec">TwinFinder.Configuration.OptionsParser.parseLanguage</a></div><div class="ttdeci">static void parseLanguage(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:156</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_ade954c60454033b036a45a33490261ad"><div class="ttname"><a href="#ade954c60454033b036a45a33490261ad">TwinFinder.Configuration.OptionsParser.showHelp</a></div><div class="ttdeci">static void showHelp()</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:93</div></div>
+<div class="ttc" id="aclassTwinFinder_1_1Configuration_1_1OptionsParser_html_af73e4bab27fcd97dfbf7e24923d5e412"><div class="ttname"><a href="#af73e4bab27fcd97dfbf7e24923d5e412">TwinFinder.Configuration.OptionsParser.parseOutputFile</a></div><div class="ttdeci">static void parseOutputFile(Hashtable table, String nameInTable, Options options)</div><div class="ttdef"><b>Definition</b> OptionsParser.cs:175</div></div>
 </div><!-- fragment -->
 <p>Functions used for parsing selected options. </p>
 

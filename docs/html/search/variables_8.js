@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['shared_0',['shared',['../classTwinFinder_1_1Configuration_1_1Options.html#a748e9cfef83f6875c260ce42efd348cc',1,'TwinFinder::Configuration::Options']]],
-  ['synonymcount_1',['SynonymCount',['../classTwinFinder_1_1Configuration_1_1Defaults.html#a9ccf14b1956ee6076ef215b4447f73e4',1,'TwinFinder::Configuration::Defaults']]],
-  ['synonyms_2',['Synonyms',['../classTwinFinder_1_1Project.html#a20ff358dc62014ef4be2bfab95b908b4',1,'TwinFinder::Project']]],
-  ['synonymsfile_3',['SynonymsFile',['../classTwinFinder_1_1ContentAnalysis_1_1Synonyms.html#a18bf079dde49dad984fbb3ac179b2c87',1,'TwinFinder::ContentAnalysis::Synonyms']]]
+  ['optionname_0',['optionName',['../classTwinFinder_1_1Configuration_1_1ArgsParser_1_1ArgEntry.html#ab54de13e0b935b7f1a2ee50bf10f0c2a',1,'TwinFinder::Configuration::ArgsParser::ArgEntry']]],
+  ['optionsettingfunctions_1',['OptionSettingFunctions',['../classTwinFinder_1_1Configuration_1_1OptionsParser.html#a87b93976308345596570a3571018e5ac',1,'TwinFinder::Configuration::OptionsParser']]],
+  ['outputfile_2',['OutputFile',['../classTwinFinder_1_1Configuration_1_1Defaults.html#a6cc897d413bf0e47c9e17ac198f3de0a',1,'TwinFinder::Configuration::Defaults']]]
 ];
