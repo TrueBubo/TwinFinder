@@ -12,10 +12,7 @@ internal class Program {
         String configLoc = createConfig(shared != null ? Path.Combine(shared, Project.Config) : Project.Config, Project.Name);
 
         IConfigReader reader = new TomlConfigReader();
-        Console.WriteLine(args.Length);
-        if (args.Length == 0) args = ["-h"];
         
-        Console.WriteLine(args.Length);
         OptionsParser optionsParser = new OptionsParser(configLoc, args, reader);
         Options options = optionsParser.options;
         options.shared = shared;
@@ -97,6 +94,6 @@ internal class Program {
             ? Path.GetFullPath(entry.Key[1])
             : Path.GetRelativePath(cwd, entry.Key[1]);
         double similarity = Math.Round(entry.Priority, decimalPrecision); // To not display really long double
-        return $"{path1} {path2} {similarity}";
+        return $"{path1} {path2} {similarity.ToString($"F{decimalPrecision}")}";
     }
 }

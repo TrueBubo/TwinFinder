@@ -55,6 +55,7 @@ public class OptionsParser {
 
     /** Sets options from command line arguments */
     private void loadArgs(String[] args) {
+        if (args.Length == 0) showHelp();
         ArgsParser.Args cmdOptions = new ArgsParser().parse(args);
         _contentLoc = cmdOptions.contentLocations;
         setOptions(cmdOptions.options);
@@ -86,22 +87,26 @@ public class OptionsParser {
     }
     
     private static void showHelp(Hashtable arg1, string arg2, Options arg3) {
-        String text =
-            $"""
-            {Project.Name} {Project.Version}
-            Released under {Project.License}    
-            
-            -h          To display this help menu
-            -m          What technique will be used to determine similar files 
-            --normalize Removes accents and diacritics
-            -n          Pairs to find
-            -s          Number of synonyms to consider
-            --lang      Language the texts are in
-            --absolute  Prints text locations using absolute paths instead of relative
-            -o          Where should the outputs of the program be sent
-            """;
-            Console.WriteLine(text);
-            Environment.Exit(0);
+        showHelp();
+    }
+
+    private static void showHelp() {
+         String text =
+             $"""
+             {Project.Name} {Project.Version}
+             Released under {Project.License}    
+             
+             -h          To display this help menu
+             -m          What technique will be used to determine similar files 
+             --normalize Removes accents and diacritics
+             -n          Pairs to find
+             -s          Number of synonyms to consider
+             --lang      Language the texts are in
+             --absolute  Prints text locations using absolute paths instead of relative
+             -o          Where should the outputs of the program be sent
+             """;
+         Console.WriteLine(text);
+         Environment.Exit(0);       
     }
 
     private static void parseMode(Hashtable table, String nameInTable, Options options) {
