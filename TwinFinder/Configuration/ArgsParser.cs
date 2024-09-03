@@ -48,10 +48,10 @@ public class ArgsParser {
     public Args parse(String[] args) {
         Hashtable options = new Hashtable();
         int idx = 0;
-        for (; idx < args.Length - 1; idx++) {
+        for (; idx < args.Length; idx++) {
             if (args[idx][0] != '-') break;
             if (!_validOptions.ContainsKey(args[idx])) break;
-            options[_validOptions[args[idx]]] = args[++idx];
+            options[_validOptions[args[idx]]] = (idx != args.Length - 1) ? args[++idx] : null;
         }
 
         String[] contentLocations = args[idx..];
