@@ -59,7 +59,7 @@ public class ProcessContent {
         }
     }
 
-	public void processClosest(String loc, String[] words) {
+	private void processClosest(String loc, String[] words) {
 		List<String> wordList = words.ToList();
         foreach (String word in words) {
         	foreach (String synonym in _synonyms.get(word)) {
@@ -80,18 +80,7 @@ public class ProcessContent {
     public HeapEntry<String[]>[] getTwinFiles(Options options) {
         switch (options.mode) {
             case Options.Mode.Closest:
-                Closest<String> closest = new Closest<String>(_frequencies, options);
-                var result = closest.getKClosest(options.pairsToFind, 0, _frequencies.Count - 1);
-
-                List<HeapEntry<String[]>> entries = new List<HeapEntry<String[]>>();
-                HeapEntry<String[]>? entry = result.dequeue();
-                while (entry != null) {
-                    entries.Add(entry);
-                    entry = result.dequeue();
-                }
-
-                entries.Reverse();
-                return entries.ToArray();
+				return getTwinFilesClosest(options);
 
             default:
                 Console.Error.WriteLine($"Mode {options.mode} does not exist");
@@ -99,6 +88,21 @@ public class ProcessContent {
                 return null;
         }
     }
+
+	private HeapEntry<String[]>[] getTwinFilesClosest(Options options) {
+        Closest<String> closest = new Closest<String>(_frequencies, options);
+        var result = closest.getKClosest(options.pairsToFind, 0, _frequencies.Count - 1);
+
+        List<HeapEntry<String[]>> entries = new List<HeapEntry<String[]>>();
+        HeapEntry<String[]>? entry = result.dequeue();
+        while (entry != null) {
+            entries.Add(entry);
+            entry = result.dequeue();
+        }
+
+        entries.Reverse();
+        return entries.ToArray();
+	}
 
     /** Pads frequencies with 0s */
     public void padFrequencies(String loc) {
