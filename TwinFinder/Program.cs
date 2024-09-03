@@ -94,6 +94,6 @@ internal class Program {
             ? Path.GetFullPath(entry.Key[1])
             : Path.GetRelativePath(cwd, entry.Key[1]);
         double similarity = Math.Round(entry.Priority, decimalPrecision); // To not display really long double
-        return $"{path1} {path2} {similarity}";
+        return $"{path1} {path2} {similarity.ToString($"F{decimalPrecision}")}";
     }
 }
