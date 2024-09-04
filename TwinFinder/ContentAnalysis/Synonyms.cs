@@ -21,13 +21,15 @@ public class Synonyms {
 
     public Synonyms(Options.Language lang, int synonymCount, String synonymsLoc) {
         if (!SynonymsFile.ContainsKey(lang)) {
-            Console.Error.WriteLine($"Language file for {Options.langToCode[lang]} was not found, available languages are:");
-            foreach (Options.Language availableLang in SynonymsFile.Keys) Console.Error.WriteLine($"\t{Options.langToCode[availableLang]}");
-            Environment.Exit(1);
+            _synonyms = new Dictionary<String, List<String>>();
+            return;
         }
-
-		String synonymsFile = Path.Combine(synonymsLoc, SynonymsFile[lang]); 
-		_synonyms = loadSynonyms(synonymsFile, synonymCount); 
+        
+        String synonymsFile = Path.Combine(synonymsLoc, SynonymsFile[lang]);
+        _synonyms = loadSynonyms(synonymsFile, synonymCount);
+        return;
+        
+        
 	}
 
     public Synonyms() {
@@ -52,5 +54,12 @@ public class Synonyms {
     
     public List<String> get(String word) {
         return _synonyms.ContainsKey(word) ? _synonyms[word] : new List<String>();
+    }
+
+    public static String langNotFoundMessage(String lang) {
+         String text = $"Language file for {lang} was not found, available languages are:\n";
+         foreach (Options.Language availableLang in SynonymsFile.Keys) text += $"\t{Options.langToCode[availableLang]}\n";
+         text += "The program will process content without any context\n";
+         return text;
     }
 }
