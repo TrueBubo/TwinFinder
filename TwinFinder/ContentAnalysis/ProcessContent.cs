@@ -112,7 +112,7 @@ public class ProcessContent {
 	}
 
     /** Pads frequencies with 0s */
-    public void padFrequencies(String loc) {
+    private void padFrequencies(String loc) {
         foreach (string word in _uniqueWords) {
             if (!_frequencies[loc].ContainsKey(word)) _frequencies[loc][word] = 0;
         }

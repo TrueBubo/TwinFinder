@@ -1,4 +1,5 @@
 using System.Collections;
+using TwinFinder.ContentAnalysis;
 
 namespace TwinFinder.Configuration;
 
@@ -156,8 +157,7 @@ public class OptionsParser {
     private static void parseLanguage(Hashtable table, String nameInTable, Options options) {
         String enteredLang = table[nameInTable]?.ToString() ?? string.Empty;
         if (options.setLanguage(enteredLang)) return;
-        Console.Error.WriteLine(
-            $"Language {enteredLang} is not supported. The selected language did not change");
+        Console.Error.WriteLine(Synonyms.langNotFoundMessage(enteredLang));
     }
 
     private static void parseAbsolutePath(Hashtable table, String nameInTable, Options options) {
