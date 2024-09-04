@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html":[0,0,0,1,3,0],
+"classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html":[1,0,0,1,3,0],
 "classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html#a5b94fd99d377434537032010fda5fb0b":[0,0,0,1,3,0,0],
 "classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html#a5b94fd99d377434537032010fda5fb0b":[1,0,0,1,3,0,0],
 "classTwinFinder_1_1ContentAnalysis_1_1Synonyms_1_1Word.html#add8bad2a497f0fd73b7c283d249b5cd1":[0,0,0,1,3,0,1],
