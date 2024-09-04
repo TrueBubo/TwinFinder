@@ -4,7 +4,7 @@ namespace TwinFinder;
 static class Project {
     public const String Name = "TwinFinder";
     public const String License = "MIT License";
-    public const String Version = "v1.0";
+    public const String Version = "v1.1";
     public const String Config = "config.toml";
     public const String Synonyms = "SynonymsFiles";
     public const String SharedEnvVariableName = "TWINFINDER_SHARED";
