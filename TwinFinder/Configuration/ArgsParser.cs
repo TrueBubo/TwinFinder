@@ -1,5 +1,6 @@
 using System.Collections;
 
+//! Handles everything regarding options. Their parsing, reading and values
 namespace TwinFinder.Configuration;
 
 /**

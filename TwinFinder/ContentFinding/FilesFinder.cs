@@ -1,3 +1,4 @@
+//! Handles converting patterns to specific file list
 namespace TwinFinder.ContentFinding;
 
 /** Finds files matching patterns */

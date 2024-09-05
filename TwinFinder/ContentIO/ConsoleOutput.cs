@@ -1,3 +1,4 @@
+//! Handles reading and writing to std and another sources and destinations
 namespace TwinFinder.ContentIO;
 
 /** Writes to standard output */
