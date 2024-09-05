@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using TwinFinder.Configuration;
 
-//! Handles statistical analysis of contents, including finding lexicografically similar contents
+//! Handles statistical analysis of contents, including finding lexicographically similar contents
 namespace TwinFinder.ContentAnalysis;
 
 /** Finds most similar contents based on how close they are lexicographically.
