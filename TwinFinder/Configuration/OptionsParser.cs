@@ -98,11 +98,11 @@ public class OptionsParser {
              Released under {Project.License}    
              
              -h          To display this help menu
-             -m          What technique will be used to determine similar files 
+             -m          What technique will be used to determine similar files (Default: closest)
              --normalize Removes accents and diacritics
-             -n          Pairs to find
-             -s          Number of synonyms to consider
-             --lang      Language the texts are in
+             -n          Pairs to find (Default: 3)
+             -s          Number of synonyms to consider (Default: 5)
+             --lang      Language the texts are in (Default: en)
              --absolute  Prints text locations using absolute paths instead of relative
              -o          Where should the outputs of the program be sent
              """;
