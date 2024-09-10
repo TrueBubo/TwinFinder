@@ -5,7 +5,7 @@
 Twin Finder is a command line tool used for finding the most similar files
 
 ## Development documentation
-You can find the documentation by opening `docs/html/index.html` 
+You can find the documentation [here](https://truebubo.github.io/TwinFinder/) 
 
 ## Installation
 ### AppImage
