@@ -80,36 +80,18 @@ public class Closest<TK> where TK : notnull {
             to = Math.Min(_indexes.Length - 1, to);
         }
 
-        if (to - from <= k) {
-            KHighest<String[]> kClosest = new KHighest<String[]>(_options.pairsToFind);
-            for (int i = from; i <= to; i++) {
-                for (int j = i + 1; j <= to; j++) {
-                    kClosest.enqueue(
-                        [_indexes[i], _indexes[j]],
-                        cosineSimilarity(_vectors[_indexes[i]], _vectors[_indexes[j]]));
-                }
+        KHighest<String[]> kClosest = new KHighest<String[]>(_options.pairsToFind);
+        for (int i = from; i <= to; i++) {
+            for (int j = i + 1; j <= to; j++) {
+                kClosest.enqueue(
+                    [_indexes[i], _indexes[j]],
+                    cosineSimilarity(_vectors[_indexes[i]], _vectors[_indexes[j]]));
             }
-
-            return kClosest;
         }
 
-        KHighest<String[]> left = new KHighest<String[]>(_options.pairsToFind);
-        Thread leftThread = new Thread(
-            () => left = getKClosest(k, from, (from + to) / 2)
-        );
-        leftThread.Start();
-
-        KHighest<String[]> right = new KHighest<String[]>(_options.pairsToFind);
-        Thread rightThread = new Thread(
-            () => right = getKClosest(k, (from + to) / 2 + 1, to)
-        );
-        rightThread.Start();
-
-        leftThread.Join();
-        rightThread.Join();
-
-        return mergeHeaps(left, right);
+        return kClosest;
     }
+   
 
     /** Helper function to merge heaps returned from getKClosest recursive calls
      * @param heap1 Heap to be merged
